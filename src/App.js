@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import usePage from './hooks/usePage'
 
 function App() {
+  const { activePage, handleNavClick, currentPage } = usePage()
+  
+  const CurrentPageComponent = currentPage
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App bg-light text-dark'>
+      <Navigation activePage={activePage} onNavClick={handleNavClick} />
+      <div className='content'>
+        <CurrentPageComponent />
+      </div>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
