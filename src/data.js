@@ -13,10 +13,11 @@ import {
   faServer
 } from '@fortawesome/free-solid-svg-icons'
 
-import projectImage1 from './assets/projects/project1.jpg'
-import projectImage2 from './assets/projects/project2.jpg'
-import projectImage3 from './assets/projects/project3.jpg'
-import projectImage4 from './assets/projects/project4.jpg'
+import wwxsImage from './assets/projects/project1.jpg'
+import panicPalImage from './assets/projects/project2.jpg'
+import deadwoodImage from './assets/projects/project3.jpg'
+import colorImage from './assets/projects/project4.jpg'
+import portfolioImage from './assets/projects/project5.jpg'
 
 export const technologies = [
   // languages
@@ -77,12 +78,22 @@ export const technologies = [
 
 export const projects = [
   {
+    title: 'Personal Portfolio',
+    technologies: ['React','Bootstrap','Github'],
+    date: 'June 2024',
+    description:
+      'Modern and professional portfolio website to showcase personal skills, projects, and achievements serving as a digital resume and highlights my abilities in web and app development and user experience design.',
+    image: portfolioImage,
+    codeLink: 'https://github.com/kaitrice/portfolio',
+    projectLink: 'https://kaitrice.github.io/portfolio/',
+  },
+  {
     title: 'Water Weather Station',
     technologies: ['Angular', 'Node', 'PostgreSQL'],
     date: 'December 2023',
     description:
       'IoT project involving a buoy device for real-time water data collection, a mobile app for data retrieval and uploading via APIs, and a responsive web UI and REST API for data management and visualization.',
-    image: projectImage1,
+    image: wwxsImage,
     codeLink: 'https://github.com/GearyER/WWXS',
     projectLink: 'https://seadc-waterweatherstation.cyberrangepoulsbo.com/',
   },
@@ -92,7 +103,7 @@ export const projects = [
     date: 'December 2023',
     description:
       'Mobile app aiming to provide support for individuals experiencing panic attacks. Using OpenAI powered chatbot designed to offer empathetic and supportive conversations to help manage panic attacks effectively.',
-    image: projectImage2,
+    image: panicPalImage,
     codeLink: 'https://github.com/kaitrice/panic-pal',
     projectLink: 'https://youtu.be/Ueqlpl4Sl4U',
   },
@@ -102,7 +113,7 @@ export const projects = [
     date: 'June 2023',
     description:
       'Digital version of the board game "Deadwood" using a GUI toolkit for Java applications. The project focuses on applying Object-Oriented Design (OOD) principles to create a robust and interactive game environment.',
-    image: projectImage3,
+    image: deadwoodImage,
     codeLink: 'https://github.com/kaitrice/deadwood',
     projectLink: '',
   },
@@ -112,7 +123,7 @@ export const projects = [
     date: 'December 2022',
     description:
       'Educational game designed to help students learn and understand color codes, such as RGB and Hexadecimal, commonly used in web development. The project is implemented using a client-server architecture.',
-    image: projectImage4,
+    image: colorImage,
     codeLink: 'https://github.com/kaitrice/guess-the-color',
     projectLink: '',
   },
