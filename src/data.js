@@ -81,6 +81,8 @@ export const projects = [
     title: 'Personal Portfolio',
     technologies: ['React','Bootstrap','Github'],
     date: 'June 2024',
+    badge: 'New',
+    badgeType: 'primary',
     description:
       'Modern and professional portfolio website to showcase personal skills, projects, and achievements serving as a digital resume and highlights my abilities in web and app development and user experience design.',
     image: portfolioImage,
@@ -91,6 +93,8 @@ export const projects = [
     title: 'Water Weather Station',
     technologies: ['Angular', 'Node', 'PostgreSQL'],
     date: 'December 2023',
+    badge: 'Legacy',
+    badgeType: 'dark',
     description:
       'IoT project involving a buoy device for real-time water data collection, a mobile app for data retrieval and uploading via APIs, and a responsive web UI and REST API for data management and visualization.',
     image: wwxsImage,
@@ -101,6 +105,8 @@ export const projects = [
     title: 'Panic Pal',
     technologies: ['React Native', 'Expo'],
     date: 'December 2023',
+    badge: 'Legacy',
+    badgeType: 'dark',
     description:
       'Mobile app aiming to provide support for individuals experiencing panic attacks. Using OpenAI powered chatbot designed to offer empathetic and supportive conversations to help manage panic attacks effectively.',
     image: panicPalImage,
@@ -111,6 +117,8 @@ export const projects = [
     title: 'Deadwood',
     technologies: ['Java', 'Java Swing'],
     date: 'June 2023',
+    badge: 'Legacy',
+    badgeType: 'dark',
     description:
       'Digital version of the board game "Deadwood" using a GUI toolkit for Java applications. The project focuses on applying Object-Oriented Design (OOD) principles to create a robust and interactive game environment.',
     image: deadwoodImage,
@@ -121,6 +129,8 @@ export const projects = [
     title: 'Guess the Color',
     technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
     date: 'December 2022',
+    badge: 'Legacy',
+    badgeType: 'dark',
     description:
       'Educational game designed to help students learn and understand color codes, such as RGB and Hexadecimal, commonly used in web development. The project is implemented using a client-server architecture.',
     image: colorImage,

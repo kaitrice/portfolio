@@ -1,7 +1,5 @@
 import React from 'react'
-import '../../css/project.css'
-import { Row, Col, Image, Stack } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Row, Col, Image, Stack, Badge } from 'react-bootstrap'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import Button from '../button'
@@ -25,7 +23,10 @@ export default function Project({ item }) {
             </h5>
           ))}
         </Stack>
-        <h6 className='text-dark fw-bold'>{item.date}</h6>
+        <Stack direction='horizontal' gap={4} className='my-1'>
+          <h6 className='text-dark fw-bold'>{item.date}</h6>
+          <Badge bg={item.badgeType}>{item.badge}</Badge>
+        </Stack>
         <p className='text-dark'>{item.description}</p>
         <Stack direction='horizontal' gap={3}>
           <Button 
