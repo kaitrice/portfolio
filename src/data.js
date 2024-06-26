@@ -87,7 +87,7 @@ export const projects = [
       'Modern and professional portfolio website to showcase personal skills, projects, and achievements serving as a digital resume and highlights my abilities in web and app development and user experience design.',
     image: portfolioImage,
     codeLink: 'https://github.com/kaitrice/portfolio',
-    projectLink: 'https://kaitrice.github.io/portfolio/',
+    projectLink: '',
   },
   {
     title: 'Water Weather Station',
