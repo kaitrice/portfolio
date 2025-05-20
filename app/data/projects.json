@@ -1,0 +1,58 @@
+[
+    {
+        "slug": "water-weather-station-iot",
+        "company": "Western Washington University Capstone, acquired by US Navy",
+        "timeline": "2023",
+        "tool": "PostgreSQL, React, Node.js",
+        "title": "Water Weather Station IoT System",
+        "description": "Developed a real-time IoT water data collection system adopted by America's Navy® in 2024, focusing on scalabling API infrastructure and optimized PostgreSQL database.",
+        "image": "/images/projects/water-weather.png",
+        "type": "website",
+        "links": [
+            { "github": "https://github.com/GearyER/WWXS" },
+            { "preview": "https://youtube.com/shorts/_5EAGs0iQbY" }
+        ]
+    },
+    {
+        "slug": "safety-hub-app",
+        "company": "",
+        "timeline": "2024–2025",
+        "tool": "React Native, Expo, Firebase, BigCommerce, Zendesk",
+        "title": "Car Seat Safety Hub App",
+        "description": "Built a cross-platform app providing parents with localized car seat resources. Integrated APIs for BigCommerce, Zendesk, and Firebase. Offline access and 15-min incremental updates included.",
+        "image": "/images/projects/safety-hub.png",
+        "type": "app",
+        "links": [
+            { "github": "https://github.com/yourusername/safety-hub-app" },
+            { "preview": "https://yourdomain.com/safety-hub-app" }
+        ]
+    },
+    {
+        "slug": "band-portfolio-website",
+        "company": "",
+        "timeline": "2024",
+        "tool": "HTML, CSS, JavaScript",
+        "title": "Band Portfolio Website",
+        "description": "Built a static, content-editable website for a band featuring music links, event tickets, blog posts, and a media gallery. Designed for dynamic functionality and free hosting.",
+        "image": "/images/projects/band-website.png",
+        "type": "website",
+        "links": [
+            { "github": "https://github.com/yourusername/band-portfolio-website" },
+            { "preview": "https://theluckyeffect.com/" }
+        ]
+    },
+    {
+        "slug": "color-guessing-game",
+        "company": "",
+        "timeline": "2024",
+        "tool": "React",
+        "title": "Chroma Choice",
+        "description": "A color guessing game where users identify hex values visually. Features a playful UI and replayability through randomized challenges.",
+        "image": "/images/projects/chroma-choice.png",
+        "type": "website",
+        "links": [
+            { "github": "https://github.com/yourusername/chroma-choice" },
+            { "preview": "https://yourdomain.com/chroma-choice" }
+        ]
+    }
+]
