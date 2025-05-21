@@ -1,53 +1,117 @@
-import projects from '../../data/projects.json'
+'use client'
+
+import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
 import Image from 'next/image'
+import { getProject } from '@/app/utils/projects'
+import { Project } from '@/app/type/Project'
+import { Link } from '@/app/components/common/Link'
+import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-	const project = projects.find((p) => p.slug === params.slug)
+function Details({ project }: { project: Project }) {
+	return (
+		<div className="sm:w-64 flex-shrink-0">
+			{/* Metadata */}
+			<div className="font-semibold text-gray-600 text-sm mb-4">
+				{project.start_date && <p>Timeline: {project.start_date}</p>}
+				{project.company && <p>Company: {project.company}</p>}
+				{project.tools?.length > 0 && (
+					<div className="flex flex-wrap gap-1">
+						<span>Tools:</span>
+						{project.tools.map((tool, index) => (
+							<span key={index}>
+								{tool}
+								{index < project.tools.length - 1 && <span className="px-1">|</span>}
+							</span>
+						))}
+					</div>
+				)}
+			</div>
 
-	if (!project) {
-		notFound()
-	}
+			{/* Links */}
+			<div className="flex flex-wrap items-start gap-2">
+				{project.links.map((link, index) => (
+					<Link
+						key={index}
+						href={link.url}
+						aria-label={link.type ?? 'external link'}
+						className="hover:text-pink-600"
+					>
+						{link.type === 'github' ? (
+							<GithubLogo size={20} weight="regular" />
+						) : (
+							<ArrowCircleUpRight size={20} weight="regular" />
+						)}
+					</Link>
+				))}
+			</div>
+		</div>
+	)
+}
+
+export default function ProjectPage() {
+	const params = useParams<{ slug: string }>()
+	const slug = params.slug
+	const project: Project | undefined = getProject(slug)
+
+	if (!project) notFound()
+
+	const hasCaseStudyOrImages = !!project.caseStudy || (project.images?.length ?? 0) > 1
 
 	return (
 		<div className="px-4 sm:px-6 lg:px-48 py-6">
-			<h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+			<h1 className="text-4xl font-bold mb-1">{project.title}</h1>
 
-			{/* Metadata */}
-			<div className="text-gray-600 text-sm mb-4">
-				{project.timeline && <p><strong>Timeline:</strong> {project.timeline}</p>}
-				{project.company && <p><strong>Company:</strong> {project.company}</p>}
-				{project.tool && <p><strong>Tools:</strong> {project.tool}</p>}
-			</div>
-
-			{/* Description */}
 			<p className="mb-6">{project.description}</p>
 
-			{/* Image */}
-			{project.image && (
-				<Image src={project.image} alt={project.title} width={24} height={24} className="mb-6 rounded shadow" />
-			)}
-
-			{/* Links */}
-			{project.links && project.links.length > 0 && (
-				<div className="space-x-4">
-					{project.links.map((linkObj, idx) => {
-						const [label, url] = Object.entries(linkObj)[0]
-						return (
-							<Link
-								key={idx}
-								href={url}
-								className="inline-block text-blue-600 hover:underline"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{label.charAt(0).toUpperCase() + label.slice(1)} ↗
-							</Link>
-						)
-					})}
+			{/* Thumbnail */}
+			{project.images && (
+				<div className="relative w-full aspect-video mb-6 rounded overflow-hidden">
+					<Image
+						src={project.images[0]}
+						alt={`${project.title} thumbnail`}
+						fill
+						className="object-cover"
+					/>
 				</div>
 			)}
+
+			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col sm:flex-row gap-6' : 'block'}`}>
+				{hasCaseStudyOrImages && (
+					<div className="flex-1">
+						{project.caseStudy && (
+							<div>
+								<h2 className="text-2xl font-bold mb-1">Case Study</h2>
+								<div
+									className="prose prose-sm max-w-none"
+									dangerouslySetInnerHTML={{ __html: project.caseStudy }}
+								/>
+							</div>
+						)}
+
+						{project.images?.length > 1 && (
+							<div className="mt-6">
+								<h2 className="text-2xl font-bold">Images</h2>
+								<div className="flex flex-wrap gap-1 items-center text-xs text-gray-500 mb-4">
+									{project.images.slice(1).map((image, index) => (
+										<Image
+											key={index}
+											src={image}
+											alt={`${project.title} image ${index + 2}`}
+											width={24}
+											height={24}
+											className="rounded shadow"
+											loading="lazy"
+										/>
+									))}
+								</div>
+							</div>
+						)}
+					</div>
+				)}
+
+				<Details project={project} />
+			</div>
 		</div>
 	)
 }

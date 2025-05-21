@@ -1,6 +1,6 @@
 'use client'
-import socials from '../data/social'
-import NavLink from './navLink'
+import socials from '../../data/social'
+import NavLink from './NavLink'
 
 export default function Footer() {
   return (

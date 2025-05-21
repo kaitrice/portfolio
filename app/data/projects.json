@@ -1,58 +1,152 @@
 [
     {
-        "slug": "water-weather-station-iot",
-        "company": "Western Washington University Capstone, acquired by US Navy",
-        "timeline": "2023",
-        "tool": "PostgreSQL, React, Node.js",
-        "title": "Water Weather Station IoT System",
-        "description": "Developed a real-time IoT water data collection system adopted by America's Navy® in 2024, focusing on scalabling API infrastructure and optimized PostgreSQL database.",
-        "image": "/images/projects/water-weather.png",
-        "type": "website",
+        "slug": "water-weather-station",
+        "company": "Western Washington University Capstone",
+        "start_date": "2023",
+        "tools": [
+            "Angular",
+            "Express",
+            "Node.js",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "title": "Water Weather Station | IoT System",
+        "description": "Developed a real-time IoT water data collection system adopted by America's Navy® in 2024, focusing on scaling API infrastructure and optimized PostgreSQL database.",
+        "images": [
+            "/images/projects/wwxs-thumbnail.avif"
+        ],
         "links": [
-            { "github": "https://github.com/GearyER/WWXS" },
-            { "preview": "https://youtube.com/shorts/_5EAGs0iQbY" }
-        ]
+            {
+                "type": "github",
+                "url": "https://github.com/GearyER/WWXS"
+            },
+            {
+                "type": "preview",
+                "url": "https://youtube.com/shorts/_5EAGs0iQbY"
+            }
+        ],
+        "caseStudy": "<div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Overview</h3><p>The Water Weather Station project is a real-time IoT system designed to collect and monitor water quality and weather conditions across remote locations. This system was developed to support field research and data analysis, ultimately improving environmental monitoring and infrastructure planning.</p></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">My Role</h3><p>I led the frontend development and contributed to backend architecture. I built a responsive web interface to visualize sensor data in real time, integrated a scalable API layer to handle high-frequency data ingestion, and optimized database queries to support performance across large datasets.</p></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Challenges</h3><p>One of the key challenges was optimizing data flow between sensors and the dashboard while ensuring reliable real-time updates without overwhelming the server. We addressed this by implementing message queuing, aggressive caching, and efficient WebSocket communication.</p></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Impact</h3><p>The system is actively used in Navy-funded field deployments and helps researchers and engineers collect and interpret water/weather metrics with increased accuracy. It has enhanced responsiveness to environmental changes and provides a scalable foundation for future sensor expansion.</p></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Takeaways</h3><p>This project deepened my experience with real-time systems and highlighted the importance of designing for data efficiency and resilience in resource-constrained environments. It also reinforced the power of thoughtful UI/UX in communicating technical data clearly.</p></div></div>"
     },
     {
         "slug": "safety-hub-app",
         "company": "",
-        "timeline": "2024–2025",
-        "tool": "React Native, Expo, Firebase, BigCommerce, Zendesk",
+        "start_date": "2024",
+        "tools": [
+            "React Native",
+            "Expo",
+            "Firebase",
+            "BigCommerce",
+            "Zendesk"
+        ],
         "title": "Car Seat Safety Hub App",
         "description": "Built a cross-platform app providing parents with localized car seat resources. Integrated APIs for BigCommerce, Zendesk, and Firebase. Offline access and 15-min incremental updates included.",
-        "image": "/images/projects/safety-hub.png",
-        "type": "app",
+        "images": [
+            "/images/projects/safety-hub-thumbnail.avif"
+        ],
         "links": [
-            { "github": "https://github.com/yourusername/safety-hub-app" },
-            { "preview": "https://yourdomain.com/safety-hub-app" }
+            {
+                "type": "github",
+                "url": "https://github.com/yourusername/safety-hub-app"
+            },
+            {
+                "type": "preview",
+                "url": "https://yourdomain.com/safety-hub-app"
+            }
         ]
     },
     {
-        "slug": "band-portfolio-website",
-        "company": "",
-        "timeline": "2024",
-        "tool": "HTML, CSS, JavaScript",
-        "title": "Band Portfolio Website",
+        "slug": "the-lucky-effect",
+        "company": "The Lucky Effect",
+        "start_date": "2025",
+        "tools": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "title": "The Lucky Effect | Website and eCommerce Store",
         "description": "Built a static, content-editable website for a band featuring music links, event tickets, blog posts, and a media gallery. Designed for dynamic functionality and free hosting.",
-        "image": "/images/projects/band-website.png",
-        "type": "website",
+        "images": [
+            "/images/projects/tle-thumbnail.avif"
+        ],
         "links": [
-            { "github": "https://github.com/yourusername/band-portfolio-website" },
-            { "preview": "https://theluckyeffect.com/" }
+            {
+                "type": "github",
+                "url": "https://github.com/yourusername/band-portfolio-website"
+            },
+            {
+                "type": "preview",
+                "url": "https://theluckyeffect.com/"
+            }
         ]
     },
     {
-        "slug": "color-guessing-game",
+        "slug": "color-match",
         "company": "",
-        "timeline": "2024",
-        "tool": "React",
-        "title": "Chroma Choice",
-        "description": "A color guessing game where users identify hex values visually. Features a playful UI and replayability through randomized challenges.",
-        "image": "/images/projects/chroma-choice.png",
-        "type": "website",
+        "start_date": "2022",
+        "tools": [
+            "React"
+        ],
+        "title": "Color Match",
+        "description": "A color guessing game where users identify hex values visually. Features a playful UI and playable through randomized challenges.",
+        "images": [
+            "/images/projects/color-match-thumbnail.avif"
+        ],
         "links": [
-            { "github": "https://github.com/yourusername/chroma-choice" },
-            { "preview": "https://yourdomain.com/chroma-choice" }
+            {
+                "type": "github",
+                "url": "https://github.com/yourusername/chroma-choice"
+            },
+            {
+                "type": "preview",
+                "url": "https://yourdomain.com/chroma-choice"
+            }
+        ]
+    },
+    {
+        "slug": "panic-pal",
+        "company": "",
+        "start_date": "2023",
+        "tools": [
+            "React Native"
+        ],
+        "title": "Panic Pal | Panic & Anxiety Relief App",
+        "description": "lorem ipsum",
+        "images": [
+            "/images/projects/panic-pal-thumbnail.avif"
+        ],
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/yourusername/test"
+            },
+            {
+                "type": "preview",
+                "url": "https://yourdomain.com/test"
+            }
+        ]
+    },
+    {
+        "slug": "diono",
+        "company": "Diono",
+        "start_date": "2025",
+        "tools": [
+            "React"
+        ],
+        "title": "Diono | Custom BigCommerce Storefront Theme",
+        "description": "lorem ipsum",
+        "images": [
+            "/images/projects/test-thumbnail.png",
+            "/images/projects/test2.png"
+        ],
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/yourusername/test2"
+            },
+            {
+                "type": "preview",
+                "url": "https://yourdomain.com/test2"
+            }
         ]
     }
 ]
