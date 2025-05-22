@@ -7,14 +7,13 @@ export function Education() {
     return (
         <>
             {education.map((school) => (
-                <div key={school.name} className="flex flex-col sm:flex-row gap-4 mb-8 items-center">
+                <div key={school.name} className="flex flex-row gap-4 mb-8 items-center">
                     <ProfilePicture width={60} src={school.meta.src} alt={`${school.name} logo`} />
 
-                    {/* Bio Highlight */}
                     <div className="flex flex-col w-full">
-                        <div className="flex justify-between items-center gap-2">
-                            <h1 className="text-xl font-bold">{school.name}</h1>
-                            <time className="text-base text-gray-400 dark:text-gray-500 font-bold">
+                        <div className="flex justify-between items-start gap-2">
+                            <h1 className="flex-1 text-xl font-bold">{school.name}</h1>
+                            <time className="text-sm text-gray-400 dark:text-gray-500 font-bold">
                                 {school.start_date}{school.end_date && ` – ${school.end_date}`}
                             </time>
                         </div>

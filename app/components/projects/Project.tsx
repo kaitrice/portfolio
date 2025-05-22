@@ -11,7 +11,7 @@ export function Project({ project }: { project: ProjectType }) {
         </time>
 
         <div>
-          <div className="flex flex-wrap items-start gap-2">
+          <div className="flex flex-wrap items-start gap-2 sm:gap-4 mb-2">
             {/* Title */}
             <Link href={`/projects/${project.slug}`} className="hover:text-pink-600">
               <h3 className="font-semibold">{project.title}</h3>

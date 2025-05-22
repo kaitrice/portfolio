@@ -8,12 +8,12 @@ import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
 function Details({ project }: { project: Project }) {
 	return (
 		<div className="sm:w-64 flex-shrink-0">
-			<div className="font-semibold text-gray-600 text-sm mb-4">
-				{project.start_date && <p>Timeline: {project.start_date}</p>}
-				{project.company && <p>Company: {project.company}</p>}
+			<div className="text-gray-600 text-sm mb-4">
+				{project.start_date && <p><span className='font-semibold'>Timeline: </span>{project.start_date}</p>}
+				{project.company && <p><span className='font-semibold'>Company: </span>{project.company}</p>}
 				{project.tools?.length > 0 && (
 					<div className="flex flex-wrap gap-1">
-						<span>Tools:</span>
+						<span className='font-semibold'>Tools:</span>
 						{project.tools.map((tool, index) => (
 							<span key={index}>
 								{tool}
@@ -33,9 +33,9 @@ function Details({ project }: { project: Project }) {
 						className="hover:text-pink-600"
 					>
 						{link.type === 'github' ? (
-							<GithubLogo size={20} weight="regular" />
+							<GithubLogo size={24} weight="regular" />
 						) : (
-							<ArrowCircleUpRight size={20} weight="regular" />
+							<ArrowCircleUpRight size={24} weight="regular" />
 						)}
 					</Link>
 				))}
@@ -61,6 +61,10 @@ export default async function ProjectPage({
 			<h1 className="text-4xl font-bold mb-1">{project.title}</h1>
 			<p className="mb-6">{project.description}</p>
 
+			<div className={`flex ${hasCaseStudyOrImages ? 'hidden' : 'block'}`}>
+				<Details project={project} />
+			</div>
+
 			{project.images && (
 				<div className="relative w-full aspect-video mb-6 rounded overflow-hidden">
 					<Image
@@ -72,9 +76,9 @@ export default async function ProjectPage({
 				</div>
 			)}
 
-			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col sm:flex-row gap-6' : 'block'}`}>
+			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col sm:flex-row gap-6' : 'hidden'}`}>
 				{hasCaseStudyOrImages && (
-					<div className="flex-1">
+					<div className="flex-1 order-1 sm:order-0">
 						{project.caseStudy && (
 							<div>
 								<h2 className="text-2xl font-bold mb-1">Case Study</h2>
