@@ -1,4 +1,4 @@
-import { Project as ProjectType } from '../../type/Project'
+import { Project as ProjectType } from '../../type/project'
 import { Project } from "./Project"
 
 export function Projects({ data }: { data: ProjectType[] }) {

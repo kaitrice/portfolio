@@ -1,7 +1,7 @@
-import { NavLinkProps } from "../../type/NavItem"
+import { NavItem } from "../../type/navItem"
 import { Link } from "./Link"
 
-export default function NavLink({ item }: NavLinkProps) {
+export default function NavLink({ item }: NavItem) {
   return (
     <Link
       href={item.url}

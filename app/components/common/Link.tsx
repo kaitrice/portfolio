@@ -1,5 +1,5 @@
 import DefaultLink from 'next/link'
-import { LinkProps } from '../../type/Link'
+import { LinkProps } from '../../type/link'
 
 export function Link({ href, children, className = '' }: LinkProps) {
 	return (

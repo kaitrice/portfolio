@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-export type NavLinkProps = {
+export type NavItem = {
   item: {
     url: string
     name: ReactNode

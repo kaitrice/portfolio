@@ -44,8 +44,13 @@ function Details({ project }: { project: Project }) {
 	)
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-	const project: Project | undefined = getProject(params.slug)
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+	const project: Project | undefined = getProject(slug)
 
 	if (!project) notFound()
 

@@ -1,5 +1,5 @@
 import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
-import { Project as ProjectType } from '../../type/Project'
+import { Project as ProjectType } from '../../type/project'
 import { Link } from '../common/Link'
 
 export function Project({ project }: { project: ProjectType }) {
