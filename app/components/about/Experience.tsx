@@ -1,4 +1,5 @@
 import { getJobs } from "@/app/utils/jobs"
+import { formatDateToMonthYear } from "@/app/utils/utils"
 
 export function Experience() {
     const jobs = getJobs()
@@ -12,7 +13,7 @@ export function Experience() {
                     <div className="flex items-start justify-between">
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white">{job.company}</h3>
                         <time className="mb-1 text-sm font-semibold leading-none text-gray-400 dark:text-gray-500">
-                            {job.start_date} {job.end_date && `- ${job.end_date}`}
+                            {formatDateToMonthYear(job.start_date)} {job.end_date && `– ${formatDateToMonthYear(job.end_date)}`}
                         </time>
                     </div>
                     <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">

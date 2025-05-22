@@ -1,25 +1,26 @@
 [
     {
+        "company": "Diono",
+        "position": "eCommerce Operations Assistant",
+        "type": "Full-Time",
+        "start_date": "2023-08",
+        "end_date": "Present",
+        "description": "Transitioned Diono's BigCommerce development in-house, leading site development, API auditing, and cross-functional coordination across seven global websites. Improved site speed and engagement by rebuilding core pages and removing bottlenecks. Additionally led development of a React Native safety app with multi-region support and offline access, nearly launching before company acquisition halted the project."
+    },
+    {
         "company": "The Lucky Effect",
         "position": "Web Developer",
         "type": "Freelance Contract",
         "start_date": "2025-01",
-        "end_date": "2025-06",
-        "description": "lorem ipsum"
+        "end_date": "Present",
+        "description": "Sole developer behind the band's custom Next.js website, designed to automate content updates and eliminate manual maintenance. Built the full digital infrastructure—design mockups, domain setup, dual live/preview environments, and tech stack—to connect users with Spotify, YouTube, and Bandsintown. Focused on creating a maintainable, scalable, and budget-friendly solution aligned with the band’s long-term goals."
     },
     {
         "company": "Learning.com",
         "position": "Content Developer",
         "type": "Freelance Contract",
         "start_date": "2025-05",
-        "end_date": "2025-06",
-        "description": "lorem ipsum"
-    },
-    {
-        "company": "Diono",
-        "position": "eCommerce Operations Assistant",
-        "type": "Full-Time",
-        "start_date": "Present",
-        "description": "lorem ipsum"
+        "end_date": "Present",
+        "description": "Responsible for managing and QA'ing multimedia lesson content using JSON configuration files and Git. Integrated video, slide, and audio assets across 35+ lessons while identifying logic errors and maintaining data consistency for final deployment in a structured content system."
     }
 ]
