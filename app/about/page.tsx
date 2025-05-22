@@ -13,7 +13,7 @@ export default function About() {
 			<div>
         <div className="mb-12 text-center">
           <h1 className='text-4xl font-bold mb-4'>Kaitlyn Rice</h1>
-          <p className='mb-2'>a developer and creative problem solver who builds clean, thoughtful digital experiences. I specialize in modern web and mobile development, with a focus on performance, accessibility, and user-first design. Whether it's launching full-stack apps, refining frontend interfaces, or integrating third-party APIs, I love turning ideas into practical, impactful solutions.</p>
+          <p className='mb-2'>a developer and creative problem solver who builds clean, thoughtful digital experiences. I specialize in modern web and mobile development, with a focus on performance, accessibility, and user-first design. Whether it&apos;s launching full-stack apps, refining frontend interfaces, or integrating third-party APIs, I love turning ideas into practical, impactful solutions.</p>
         </div>
         
         {/* Experience */}

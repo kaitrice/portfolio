@@ -1,17 +1,13 @@
-'use client'
-
-import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { getProject } from '@/app/utils/projects'
-import { Project } from '@/app/type/Project'
+import { Project } from '@/app/type/project'
 import { Link } from '@/app/components/common/Link'
 import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
 
 function Details({ project }: { project: Project }) {
 	return (
 		<div className="sm:w-64 flex-shrink-0">
-			{/* Metadata */}
 			<div className="font-semibold text-gray-600 text-sm mb-4">
 				{project.start_date && <p>Timeline: {project.start_date}</p>}
 				{project.company && <p>Company: {project.company}</p>}
@@ -28,7 +24,6 @@ function Details({ project }: { project: Project }) {
 				)}
 			</div>
 
-			{/* Links */}
 			<div className="flex flex-wrap items-start gap-2">
 				{project.links.map((link, index) => (
 					<Link
@@ -49,10 +44,8 @@ function Details({ project }: { project: Project }) {
 	)
 }
 
-export default function ProjectPage() {
-	const params = useParams<{ slug: string }>()
-	const slug = params.slug
-	const project: Project | undefined = getProject(slug)
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+	const project: Project | undefined = getProject(params.slug)
 
 	if (!project) notFound()
 
@@ -61,10 +54,8 @@ export default function ProjectPage() {
 	return (
 		<div className="px-4 sm:px-6 lg:px-48 py-6">
 			<h1 className="text-4xl font-bold mb-1">{project.title}</h1>
-
 			<p className="mb-6">{project.description}</p>
 
-			{/* Thumbnail */}
 			{project.images && (
 				<div className="relative w-full aspect-video mb-6 rounded overflow-hidden">
 					<Image
