@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { getProject } from '@/app/utils/projects'
+import { getProject, getProjects } from '@/app/utils/projects'
 import { Project } from '@/app/type/project'
 import { Link } from '@/app/components/common/Link'
 import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
@@ -106,3 +106,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 		</div>
 	)
 }
+
+export async function generateStaticParams() {
+	const projects = await getProjects()
+	
+	return projects.map((project) => ({
+		slug: project.slug,
+	}))
+}
+

@@ -1,4 +1,4 @@
-import { Project } from "../type/Project"
+import { Project } from "../type/project"
 import projects from '../data/projects.json'
 import { sortByYear } from "./utils"
 
