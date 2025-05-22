@@ -1,4 +1,4 @@
-import { Education } from "../type/education"
+import { Education } from "../type/education.type"
 import education from "../data/education.json"
 import { sortByYear } from "./utils"
 

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { getProject, getProjects } from '@/app/utils/projects'
-import { Project } from '@/app/type/project'
+import { Project } from '@/app/type/project.type'
 import { Link } from '@/app/components/common/Link'
 import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
 

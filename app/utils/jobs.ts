@@ -1,4 +1,4 @@
-import { Job } from "../type/job"
+import { Job } from "../type/job.type"
 import jobs from "../data/jobs.json"
 import { sortByYear } from "./utils"
 

@@ -1,4 +1,4 @@
-import { NavItem } from "../../type/navItem"
+import { NavItem } from "../../type/navItem.type"
 import { Link } from "./Link"
 
 export default function NavLink({ item }: NavItem) {
