@@ -2,16 +2,18 @@
     {
         "slug": "water-weather-station",
         "company": "Western Washington University Capstone",
-        "start_date": "2023",
+        "start_date": "2023-01",
+        "end_date": "2023-12",
         "tools": [
             "Angular",
+            "TypeScript",
             "Express",
             "Node.js",
             "PostgreSQL",
             "Docker"
         ],
         "title": "Water Weather Station | IoT System",
-        "description": "Developed a real-time IoT water data collection system adopted by America's Navy® in 2024, focusing on scaling API infrastructure and optimized PostgreSQL database.",
+        "description": "Scaling API infrastructure and optimizing database",
         "images": [
             "/images/projects/wwxs-thumbnail.avif"
         ],
@@ -30,122 +32,145 @@
     {
         "slug": "safety-hub-app",
         "company": "",
-        "start_date": "2024",
+        "start_date": "2024-06",
+        "end_date": "2024-12",
         "tools": [
             "React Native",
-            "Expo",
             "Firebase",
-            "BigCommerce",
-            "Zendesk"
+            "BigCommerce API",
+            "Zendesk API",
+            "Expo"
         ],
-        "title": "Car Seat Safety Hub App",
-        "description": "Built a cross-platform app providing parents with localized car seat resources. Integrated APIs for BigCommerce, Zendesk, and Firebase. Offline access and 15-min incremental updates included.",
+        "title": "Diono | Car Seat Safety Hub App",
+        "description": "Cross-platform app providing caregivers resources to keep their kids safe.",
         "images": [
             "/images/projects/safety-hub-thumbnail.avif"
         ],
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/yourusername/safety-hub-app"
-            },
-            {
-                "type": "preview",
-                "url": "https://yourdomain.com/safety-hub-app"
-            }
-        ]
+        "links": []
     },
     {
         "slug": "the-lucky-effect",
         "company": "The Lucky Effect",
-        "start_date": "2025",
+        "start_date": "2025-01",
+        "end_date": "2025-06",
         "tools": [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "Next.js",
+            "TailwindCSS",
+            "TypeScript",
+            "Vercel",
+            "Youtube",
+            "Spotify API",
+            "BandsInTown API",
+            "Git"
         ],
         "title": "The Lucky Effect | Website and eCommerce Store",
-        "description": "Built a static, content-editable website for a band featuring music links, event tickets, blog posts, and a media gallery. Designed for dynamic functionality and free hosting.",
+        "description": "Architected band's digital infrastructure",
         "images": [
             "/images/projects/tle-thumbnail.avif"
         ],
         "links": [
             {
                 "type": "github",
-                "url": "https://github.com/yourusername/band-portfolio-website"
+                "url": "https://github.com/kaitrice/web-tle"
             },
             {
                 "type": "preview",
                 "url": "https://theluckyeffect.com/"
             }
-        ]
+        ],
+        "caseStudy": "<div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Overview</h3><div class=\"ms-2\"><p>The Lucky Effect needed a professional digital presence that could grow with them while remaining easy to maintain without a full scale technical team. They wanted to promote music, tours, and social links from one centralized site without constant manual updates.</p><p>This was a solo freelance project built from scratch. I worked directly with the band, balancing their creative vision with performance and scalability needs, while keeping within a small budget and tight turnaround time.</p></div></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Approach</h3><div class=\"ms-2\"><p>I started by creating low-fidelity mockups to outline key content sections: music, video, events, and social links. Once approved, I:</p><ul class=\"list-disc ms-4 \"><li>Chose Next.js for static generation and easy routing</li><li>Used Tailwind CSS for rapid styling</li><li>Hosted on Vercel with custom domain setup</li><li>Built out both a public site and a hidden preview environment for stealth updates</li></ul></div></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Challenges</h3><div class=\"ms-2\"><p>One of the key challenges was needing to manual update the website for every new release. I addressed this by using embedded links and APIs to platforms (Spotify, YouTube, Bandsintown) to automate content refresh without editing code.</p><p>Another challenge was the risk of breaking the live site during updates and getting pre-approval from all teammembers. To combat this I created a hidden, password-protected preview version of the site for internal review and testing.</p></div></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Impact</h3><div class=\"ms-2\"><ul class=\"list-disc ms-4 \"><li>Delivered a fast, lightweight site tailored to the band's style and needs</li><li>Enabled real-time content updates through integrations with streaming platforms</li><li>Provided a cost-effective, low-maintenance solution the band could own and grow with</li><li>Positive feedback from the band and their fans</li></ul></div></div><div class=\"mb-3\"><h3 class=\"text-lg font-semibold\">Takeaways</h3><div class=\"ms-2\"><p>This project deepened my confidence in creating full-stack solo solutions. I learned how to set up low-cost yet powerful infrastructure, and how to integrate dynamic third-party tools without bloating the codebase. In the future, I'd consider layering in a headless CMS if content demands grow.</p></div></div></div>"
     },
     {
         "slug": "color-match",
         "company": "",
-        "start_date": "2022",
+        "start_date": "2021-09",
+        "end_date": "2022-03",
         "tools": [
-            "React"
+            "HTML",
+            "CSS",
+            "JavaScript"
         ],
         "title": "Color Match",
-        "description": "A color guessing game where users identify hex values visually. Features a playful UI and playable through randomized challenges.",
+        "description": "Mini game identifying hex values visually",
         "images": [
             "/images/projects/color-match-thumbnail.avif"
         ],
         "links": [
             {
                 "type": "github",
-                "url": "https://github.com/yourusername/chroma-choice"
-            },
-            {
-                "type": "preview",
-                "url": "https://yourdomain.com/chroma-choice"
+                "url": "https://github.com/kaitrice/guess-the-color"
             }
         ]
     },
     {
         "slug": "panic-pal",
         "company": "",
-        "start_date": "2023",
+        "start_date": "2023-09",
+        "end_date": "2023-12",
         "tools": [
-            "React Native"
+            "Figma",
+            "React Native",
+            "Firebase",
+            "OpenAI API",
+            "Expo"
         ],
         "title": "Panic Pal | Panic & Anxiety Relief App",
-        "description": "lorem ipsum",
+        "description": "Cross-platform app providing panic and anxiety relief when it matters most.",
         "images": [
             "/images/projects/panic-pal-thumbnail.avif"
         ],
         "links": [
             {
                 "type": "github",
-                "url": "https://github.com/yourusername/test"
+                "url": "https://github.com/kaitrice/panic-pal"
             },
             {
                 "type": "preview",
-                "url": "https://yourdomain.com/test"
+                "url": "https://youtu.be/Ueqlpl4Sl4U"
             }
         ]
     },
     {
         "slug": "diono",
         "company": "Diono",
-        "start_date": "2025",
+        "start_date": "2025-04",
+        "end_date": "2025-05",
         "tools": [
-            "React"
+            "HTML",
+            "CSS",
+            "JavaScript"
         ],
         "title": "Diono | Custom BigCommerce Storefront Theme",
-        "description": "lorem ipsum",
+        "description": "Redesigned BigCommerce theme, boosting performance and visual consistency.",
         "images": [
             "/images/projects/test-thumbnail.png",
             "/images/projects/test2.png"
         ],
         "links": [
             {
-                "type": "github",
-                "url": "https://github.com/yourusername/test2"
-            },
-            {
                 "type": "preview",
-                "url": "https://yourdomain.com/test2"
+                "url": "https://diono.com/"
+            }
+        ]
+    },
+    {
+        "slug": "deadwood",
+        "company": "",
+        "start_date": "2023-03",
+        "end_date": "2023-06",
+        "tools": [
+            "Java",
+            "Swing"
+        ],
+        "title": "Deadwood",
+        "description": "Board game implemented as a text-based console application and a GUI game.",
+        "images": [
+            "/images/projects/color-match-thumbnail.avif"
+        ],
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/kaitrice/deadwood"
             }
         ]
     }

@@ -29,3 +29,26 @@ export function sortByYear<T extends { start_date: string }>(data: T[]): T[] {
 		return bTime - aTime
 	})
 }
+
+export const iconMap = {
+	html: 'logos:html-5',
+	css: 'logos:css-3',
+	javascript: 'logos:javascript',
+	java: 'logos:java',
+	react: 'logos:react',
+	next: 'simple-icons:nextdotjs',
+	node: 'logos:nodejs-icon',
+	express: 'simple-icons:express',
+	mysql: 'logos:mysql',
+	postgresql: 'logos:postgresql',
+	
+	firebase: 'logos:firebase',
+	vercel: 'simple-icons:vercel',
+	expo: 'simple-icons:expo',
+	figma: 'logos:figma',
+	postman: 'logos:postman-icon',
+
+	github: "mdi:github",
+	linkedin: "mdi:linkedin",
+	envelope: "mdi:email-outline"
+}

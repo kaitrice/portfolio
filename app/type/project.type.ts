@@ -2,6 +2,7 @@ export type Project = {
 	slug: string
 	company: string
 	start_date: string
+	end_date?: string
 	tools: string[]
 	title: string
 	description: string

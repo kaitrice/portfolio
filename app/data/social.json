@@ -1,0 +1,14 @@
+[
+	{ 
+		"name": "github", 
+		"url": "#" 
+	},
+	{ 
+		"name": "linkedin", 
+		"url": "#" 
+	},
+	{ 
+		"name": "envelope", 
+		"url": "mailto:kaitnrice@outlook.com" 
+	}
+]

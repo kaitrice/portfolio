@@ -4,5 +4,5 @@ export type Job = {
 	type: string
 	start_date: string
 	end_date?: string
-	description: string
+	description?: string
 }
