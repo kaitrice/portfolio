@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react/dist/iconify.js"
 
 export default function Home() {
   return (
-    <div className="p-10">
+    <main className="p-10">
       <div className="flex flex-row gap-4 mb-8 items-center">
 
         <Link href="/about">
@@ -25,6 +25,6 @@ export default function Home() {
       </div>
 
       <RecentProjects />
-    </div> 
+    </main> 
   )
 }

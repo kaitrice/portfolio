@@ -6,9 +6,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 export default function Footer() {
   const socials = getSocials()
   return (
-    <footer className="border-t mt-6 py-6">
-      <div className="order-none md:order flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-
+    <footer className="border-t mt-6 py-6 order-none md:order flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
         {/* Socials */}
 				<div className="flex gap-6 md:order-2">
 					{socials.map((social, index) => {
@@ -28,7 +26,6 @@ export default function Footer() {
         <div className="text-sm text-center md:text-left">
           &copy; {new Date().getFullYear()} Kaitlyn Rice. All rights reserved.
         </div>
-      </div>
     </footer>
   )
 }

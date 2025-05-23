@@ -6,6 +6,8 @@ export function Skills() {
   const skills = getSkills()
   
   return (
+	<section className="mb-8">
+		<h2 className='text-2xl font-bold mb-6'>Tech Stack</h2>
 		<div className="flex flex-wrap gap-10 justify-center rounded-xl">
 			{skills.map((skill) => {
 				const key = skill.toLowerCase()
@@ -19,5 +21,6 @@ export function Skills() {
 				)
 			})}
 		</div>
+	</section>
   )
 }

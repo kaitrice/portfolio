@@ -14,9 +14,9 @@ function Job({ job }: { job: JobType }) {
                     {formatDateToMonthYear(job.start_date)} {job.end_date && `– ${formatDateToMonthYear(job.end_date)}`}
                 </time>
             </div>
-            <div className="flex flex-col sm:flex-row gap-1 sm:gap-2">
+            <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-center">
                 <h3 className="text-sm text-gray-900 dark:text-white">{job.position}</h3>
-                <p className=" hidden sm:block leading-none text-xl text-gray-500 dark:text-gray-400">&bull;</p>
+                <p className=" hidden sm:block leading-none text-gray-500 dark:text-gray-400">&bull;</p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">{job.type}</p>
             </div>
 
@@ -28,8 +28,9 @@ export function Experience() {
     const jobs = getJobs()
 
     return (
-        <div>
-            <ol className="relative border-s-2 border-gray-300 dark:border-gray-700">
+        <section className="mb-8">
+            <h2 className='text-2xl font-bold mb-4'>Experience</h2>
+            <ol className="relative border-s-2 border-gray-300 dark:border-gray-700 mb-4">
                 {jobs.map((job, index) => (
                     <Job key={index} job={job} />
                 ))}
@@ -37,6 +38,6 @@ export function Experience() {
             <Link href="/KaitlynRice-Resume.pdf" className="hover:text-pink-600">
                 View Resume
             </Link>
-        </div>
+        </section>
     )
 }
