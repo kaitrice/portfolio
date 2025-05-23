@@ -11,9 +11,9 @@ export function Education() {
                     <ProfilePicture width={60} src={school.meta.src} alt={`${school.name} logo`} />
 
                     <div className="flex flex-col w-full">
-                        <div className="flex justify-between items-start gap-2">
-                            <h1 className="flex-1 text-xl font-bold">{school.name}</h1>
-                            <time className="text-sm text-gray-500 dark:text-gray-400 font-bold">
+                        <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-2">
+                            <h1 className="order-2 sm:order-1 flex-1 text-lg sm:text-xl font-bold">{school.name}</h1>
+                            <time className="order-1 text-sm text-gray-500 dark:text-gray-400 font-bold">
                                 {school.start_date}{school.end_date && ` – ${school.end_date}`}
                             </time>
                         </div>
