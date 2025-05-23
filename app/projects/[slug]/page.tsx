@@ -1,23 +1,41 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
+import { Icon } from '@iconify/react'
 import { getProject, getProjects } from '@/app/utils/projects'
 import { Project } from '@/app/type/project.type'
 import { Link } from '@/app/components/common/Link'
-import { ArrowCircleUpRight, GithubLogo } from '@phosphor-icons/react/dist/ssr'
+import { formatDateToMonthYear } from '@/app/utils/utils'
+
 
 function Details({ project }: { project: Project }) {
 	return (
-		<div className="sm:w-64 flex-shrink-0">
-			<div className="text-gray-600 text-sm mb-4">
-				{project.start_date && <p><span className='font-semibold'>Timeline: </span>{project.start_date}</p>}
-				{project.company && <p><span className='font-semibold'>Company: </span>{project.company}</p>}
+		<div className="flex-shrink-0">
+			<div className="text-sm mb-4">
+				{project.start_date && 
+				<p className='mb-2'>
+					<span className='font-semibold'>Timeline: </span>
+					<span>
+						{formatDateToMonthYear(project.start_date)} {project.end_date && `– ${formatDateToMonthYear(project.end_date)}`}
+					</span>
+				</p>}
+
+				{project.company && 
+				<p className='mb-2'>
+					<span className='font-semibold'>Company: </span>
+					<span>
+						{project.company}
+					</span>
+				</p>}
+
 				{project.tools?.length > 0 && (
-					<div className="flex flex-wrap gap-1">
-						<span className='font-semibold'>Tools:</span>
+					<div className="flex flex-wrap gap-1 text-sm">
+						<span className="font-semibold">Tools:</span>
 						{project.tools.map((tool, index) => (
-							<span key={index}>
-								{tool}
-								{index < project.tools.length - 1 && <span className="px-1">|</span>}
+							<span key={index} className="flex items-center">
+								<span>{tool}</span>
+								{index < project.tools.length - 1 && (
+									<span className="ms-1">&bull;</span>
+								)}
 							</span>
 						))}
 					</div>
@@ -33,9 +51,9 @@ function Details({ project }: { project: Project }) {
 						className="hover:text-pink-600"
 					>
 						{link.type === 'github' ? (
-							<GithubLogo size={24} weight="regular" />
+							<Icon icon="akar-icons:github-fill" width={24} height={24} />
 						) : (
-							<ArrowCircleUpRight size={24} weight="regular" />
+							<Icon icon="mdi:arrow-top-right" width={24} height={24} />
 						)}
 					</Link>
 				))}
@@ -45,11 +63,11 @@ function Details({ project }: { project: Project }) {
 }
 
 export default async function ProjectPage({
-  params,
+	params,
 }: {
-  params: Promise<{ slug: string }>
+	params: Promise<{ slug: string }>
 }) {
-  const { slug } = await params
+	const { slug } = await params
 	const project: Project | undefined = getProject(slug)
 
 	if (!project) notFound()
@@ -57,11 +75,11 @@ export default async function ProjectPage({
 	const hasCaseStudyOrImages = !!project.caseStudy || (project.images?.length ?? 0) > 1
 
 	return (
-		<div className="px-4 sm:px-6 lg:px-48 py-6">
+		<div className="p-10">
 			<h1 className="text-4xl font-bold mb-1">{project.title}</h1>
 			<p className="mb-6">{project.description}</p>
 
-			<div className={`flex ${hasCaseStudyOrImages ? 'hidden' : 'block'}`}>
+			<div className={`${hasCaseStudyOrImages ? 'hidden' : 'block'}`}>
 				<Details project={project} />
 			</div>
 
@@ -76,9 +94,9 @@ export default async function ProjectPage({
 				</div>
 			)}
 
-			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col sm:flex-row gap-6' : 'hidden'}`}>
+			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col md:flex-row gap-6' : 'hidden'}`}>
 				{hasCaseStudyOrImages && (
-					<div className="flex-1 order-1 sm:order-0">
+					<div className="flex-1 order-1 md:order-0">
 						{project.caseStudy && (
 							<div>
 								<h2 className="text-2xl font-bold mb-1">Case Study</h2>
@@ -110,7 +128,10 @@ export default async function ProjectPage({
 					</div>
 				)}
 
-				<Details project={project} />
+				<div className='md:w-64'>
+					<Details project={project} />
+				</div>
+
 			</div>
 		</div>
 	)
@@ -118,7 +139,7 @@ export default async function ProjectPage({
 
 export async function generateStaticParams() {
 	const projects = await getProjects()
-	
+
 	return projects.map((project) => ({
 		slug: project.slug,
 	}))

@@ -13,7 +13,7 @@ export function Education() {
                     <div className="flex flex-col w-full">
                         <div className="flex justify-between items-start gap-2">
                             <h1 className="flex-1 text-xl font-bold">{school.name}</h1>
-                            <time className="text-sm text-gray-400 dark:text-gray-500 font-bold">
+                            <time className="text-sm text-gray-500 dark:text-gray-400 font-bold">
                                 {school.start_date}{school.end_date && ` – ${school.end_date}`}
                             </time>
                         </div>
