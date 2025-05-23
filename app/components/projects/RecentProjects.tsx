@@ -6,7 +6,7 @@ export function RecentProjects() {
   const recentProjects = getProjects(5)
 
   return (
-    <div className='justify-start text-start'>
+    <section className='justify-start text-start'>
       <h2 className="text-4xl font-bold mb-4">Projects</h2>
 
       <Projects data={recentProjects} />
@@ -14,6 +14,6 @@ export function RecentProjects() {
       <Link href="/projects" className="hover:text-pink-600">
         View All Projects
       </Link>
-    </div>
+    </section>
   )
 }
