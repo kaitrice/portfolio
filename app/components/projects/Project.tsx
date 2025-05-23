@@ -1,12 +1,13 @@
 import { Project as ProjectType } from '../../type/project.type'
 import { Link } from '../common/Link'
 import { formatDateToMonthYear } from '@/app/utils/utils'
-import { Icon } from '@iconify/react/dist/iconify.js'
+import { Tools } from './Tools'
+import { Links } from './Links'
 
 export function Project({ project }: { project: ProjectType }) {
   return (
     <li className="mb-6 ps-4">
-      <div className="grid sm:grid-cols-[auto_1fr] gap-1 sm:gap-4 items-start">
+      <section className="grid sm:grid-cols-[auto_1fr] gap-1 sm:gap-4 items-start">
         <time className="text-sm font-semibold text-gray-500 dark:text-gray-400">
           {formatDateToMonthYear(project.start_date)} {project.end_date && `– ${formatDateToMonthYear(project.end_date)}`}
         </time>
@@ -19,38 +20,15 @@ export function Project({ project }: { project: ProjectType }) {
             </Link>
 
             {/* Project Links */}
-            <div className='flex flex-row gap-2'>
-              {project.links.map((link, index) => (
-                <Link key={index} href={link.url} aria-label={link.type ?? "external link"} className="hover:text-pink-600" >
-                  {link.type === 'github' ? (
-                    <Icon icon="akar-icons:github-fill" width={24} height={24} />
-                  ) : (
-                    <Icon icon="mdi:arrow-top-right" width={24} height={24} />
-                  )}
-                </Link>
-              ))}
-            </div>
+            <Links links={project.links} />
           </div>
 
           <div className="text-gray-500 dark:text-gray-400">
             <p className="mb-1 text-sm">{project.description}</p>
-            {/* Tools */}
-            {project.tools?.length > 0 && (
-              <div className="flex flex-wrap gap-1 text-xs text-gray-400 dark:text-gray-500">
-                {project.tools.map((tool, index) => (
-                  <span key={index}>
-                    {tool}
-                    {index < project.tools.length - 1 &&
-                    <span className="leading-none px-1">&bull;</span>
-                    }
-                    
-                  </span>
-                ))}
-              </div>
-            )}
+            <Tools tools={project.tools} />
           </div>
         </div>
-      </div>
+      </section>
     </li>
   )
 }
