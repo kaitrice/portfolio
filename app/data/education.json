@@ -1,11 +1,12 @@
 [
     {
         "name": "Western Washington University",
-        "degree": "Bachelor of Science, Computer Science",
+        "degree": "BSc Computer Science",
         "start_date": "2019",
         "end_date": "2023",
         "location": "Bellingham, WA",
-        "minors": "UX Design and Psychology",
+        "minors": ["UX Design", "Psychology"],
+        "research": ["Web accessibility", "Affective computing for mental health"],
         "meta": {
             "src": "https://marcom.wwu.edu/sites/marcom.wwu.edu/files/2021-01/WWU_MakeWaves_Stacked_RGB%20%281%29.png"
         }

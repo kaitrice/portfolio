@@ -4,7 +4,8 @@ export type Education = {
     start_date: string  // Format: YYYY-MM
     end_date: string    // Format: YYYY-MM
     location: string
-    minors?: string
+    minors?: string[]
+    research?: string[]
     meta: {
         src: string
     }
