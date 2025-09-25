@@ -13,7 +13,7 @@ export default function NotFound() {
   }, [router])
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-[80vh] text-center p-6">
+    <main className="flex flex-col items-center justify-center min-h-[80vh] text-center">
       <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
       
       <p className="mb-1 text-lg text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>

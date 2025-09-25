@@ -1,147 +1,109 @@
-import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 import Image from 'next/image'
-import { Icon } from '@iconify/react'
-import { getProject, getProjects } from '@/app/utils/projects'
-import { Project } from '@/app/type/project.type'
-import { Link } from '@/app/components/common/Link'
-import { formatDateToMonthYear } from '@/app/utils/utils'
+import { notFound } from 'next/navigation'
+import { Project } from '@/app/_utils/project.type'
+import { formatDateToMonthYear } from '@/app/_utils/utils'
+import { getProject, getProjects } from '@/app/_utils/projects'
+import { IconLink } from '@/app/_components/common/Icon'
+import { Gallery } from '@/app/_components/projects/Gallery'
+import { Tools } from '@/app/_components/projects/Tools'
+import CaseStudyRenderer from '@/app/_components/projects/CaseStudy'
 
-
-function Details({ project }: { project: Project }) {
-	return (
-		<div className="flex-shrink-0">
-			<div className="text-sm mb-4">
-				{project.start_date && 
-				<p className='mb-2'>
-					<span className='font-semibold'>Timeline: </span>
-					<span>
-						{formatDateToMonthYear(project.start_date)} {project.end_date && `– ${formatDateToMonthYear(project.end_date)}`}
-					</span>
-				</p>}
-
-				{project.company && 
-				<p className='mb-2'>
-					<span className='font-semibold'>Company: </span>
-					<span>
-						{project.company}
-					</span>
-				</p>}
-
-				{project.tools?.length > 0 && (
-					<div className="flex flex-wrap gap-1 text-sm">
-						<span className="font-semibold">Tools:</span>
-						{project.tools.map((tool, index) => (
-							<span key={index} className="flex items-center">
-								<span>{tool}</span>
-								{index < project.tools.length - 1 && (
-									<span className="ms-1">&bull;</span>
-								)}
-							</span>
-						))}
-					</div>
-				)}
-			</div>
-
-			<div className="flex flex-wrap items-start gap-2">
-				{project.links.map((link, index) => (
-					<Link
-						key={index}
-						href={link.url}
-						aria-label={link.type ?? 'external link'}
-						className="hover:text-pink-600"
-					>
-						{link.type === 'github' ? (
-							<Icon icon="akar-icons:github-fill" width={24} height={24} />
-						) : (
-							<Icon icon="mdi:arrow-top-right" width={24} height={24} />
-						)}
-					</Link>
-				))}
-			</div>
-		</div>
-	)
-}
-
-export default async function ProjectPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params
-	const project: Project | undefined = getProject(slug)
+	const project = getProject(slug)
 
 	if (!project) notFound()
 
-	const hasCaseStudyOrImages = !!project.caseStudy || (project.images?.length ?? 0) > 1
-
-	return (
-		<div className="p-10">
-			<h1 className="text-4xl font-bold mb-1">{project.title}</h1>
-			<p className="mb-6">{project.description}</p>
-
-			<div className={`${hasCaseStudyOrImages ? 'hidden' : 'block'}`}>
-				<Details project={project} />
-			</div>
-
-			{project.images && (
-				<div className="relative w-full aspect-video mb-6 rounded overflow-hidden">
-					<Image
-						src={project.images[0]}
-						alt={`${project.title} thumbnail`}
-						fill
-						className="object-cover"
-					/>
-				</div>
-			)}
-
-			<div className={`flex ${hasCaseStudyOrImages ? 'flex-col md:flex-row gap-6' : 'hidden'}`}>
-				{hasCaseStudyOrImages && (
-					<div className="flex-1 order-1 md:order-0">
-						{project.caseStudy && (
-							<div>
-								<h2 className="text-2xl font-bold mb-1">Case Study</h2>
-								<div
-									className="prose prose-sm max-w-none"
-									dangerouslySetInnerHTML={{ __html: project.caseStudy }}
-								/>
-							</div>
-						)}
-
-						{project.images?.length > 1 && (
-							<div className="mt-6">
-								<h2 className="text-2xl font-bold">Images</h2>
-								<div className="flex flex-wrap gap-1 items-center text-xs text-gray-500 mb-4">
-									{project.images.slice(1).map((image, index) => (
-										<Image
-											key={index}
-											src={image}
-											alt={`${project.title} image ${index + 2}`}
-											width={24}
-											height={24}
-											className="rounded shadow"
-											loading="lazy"
-										/>
-									))}
-								</div>
-							</div>
-						)}
-					</div>
-				)}
-
-				<div className='md:w-64'>
-					<Details project={project} />
-				</div>
-
-			</div>
-		</div>
-	)
+	return {
+		title: `Kaitlyn Rice | ${project.meta.title}`,
+		description: project.meta.description,
+	}
 }
 
 export async function generateStaticParams() {
 	const projects = await getProjects()
 
 	return projects.map((project) => ({
-		slug: project.slug,
+		slug: project.meta.slug,
 	}))
+}
+
+function Details({ project }: { project: Project }) {
+    return (
+        <div className="flex-shrink-0">
+            <h2>Overview</h2>
+
+            <div className="flex flex-col gap-4 text-sm">
+                {project.details.company && (
+                    <div>
+                        <h3 className="text-base font-bold">Company</h3>
+                        <p>{project.details.company}</p>
+                    </div>
+                )}
+                {project.details.dates && (
+                    <div>
+                        <h3 className="text-base font-bold">Timeline</h3>
+                        <p>{formatDateToMonthYear(project.details.dates?.start_date)} {project.details.dates?.end_date && `– ${formatDateToMonthYear(project.details.dates.end_date)}`}</p>
+                    </div>
+                )}
+
+                <div>
+                    <h3 className="text-base font-bold">Tools</h3>
+                    <Tools tools={project.details.tools} />
+                </div>
+
+                {project.details.links && (
+                    <div className="flex flex-wrap items-start gap-2">
+                        {project.details.links?.map((link, index) => (
+                            <IconLink key={index} link={link} />
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
+    )
+}
+
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+	const { slug } = await params
+	const project = getProject(slug)
+
+	if (!project) notFound()
+
+	const hasCaseStudy = project.details.hasCaseStudy && project.meta.slug
+	const hasGallery = (project.details.images?.length ?? 0) > 1
+
+	return (
+		<main>
+			<header className="md:sticky md:top-0 md:z-10 bg-neutral-50 dark:bg-neutral-900 md:pt-6 md:pb-6">
+				<h1 className="text-4xl font-bold mb-2">{project.meta.title}</h1>
+				<p className="text-lg text-neutral-700 dark:text-neutral-300">{project.meta.description}</p>
+			</header>
+
+			<div className="flex flex-col md:grid md:grid-cols-4 gap-10 md:gap-16 mt-10">
+				<section className="order-2 md:order-0 md:col-span-3 space-y-10">
+					{project.details.images?.length > 0 && (
+						<div className="relative w-full aspect-video rounded overflow-hidden">
+							<Image
+								src={project.details.images[0].url}
+								alt={project.details.images[0].alt}
+								fill
+								className="object-cover"
+							/>
+						</div>
+					)}
+					{hasCaseStudy && (
+						<CaseStudyRenderer slug={project.meta.slug} />
+					)}
+					{hasGallery && <Gallery images={project.details.images} />}
+				</section>
+
+				<aside className="order-1 md:sticky md:top-30 md:self-start md:z-20">
+					<Details project={project} />
+				</aside>
+			</div>
+		</main>
+	)
 }
 
