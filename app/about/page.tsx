@@ -1,32 +1,26 @@
-import { Education } from "../components/about/Education"
-import { Experience } from "../components/about/Experience"
-import { Skills } from "../components/about/Skills"
-import { Link } from "../components/common/Link"
-import { ProfilePicture } from "../components/common/ProfilePicture"
+import { Metadata } from "next"
+import { Education } from "../_components/about/Education"
+import { Experience } from "../_components/about/Experience"
+import { Skills } from "../_components/about/Skills"
 
-const bio = `I enjoy looking at problems from a high level and creatively finding the most effective solution. I've been coding for over 8 years and enjoy frontend and full-stack development, focusing on performance, accessibility, and user-first design.
+import data from "../_lang/en.json"
+import { Bio } from "../_components/about/Bio"
 
-Outside of programming, I love exploring new hobbies, listening to music, hosting game nights with friends, and being a cat mom to my 2 orange kitties.`
+const content = data.about
+
+export const metadata: Metadata = {
+  title: content.meta.title,
+  description: content.meta.description,
+}
 
 export default function About() {
   return (
-    <main className="p-10">
-      <div className="mb-8 flex justify-center">
-        <ProfilePicture width={180} />
-      </div>
-      
-      <section className="mb-12 text-center">
-        <h1 className='text-4xl font-bold mb-4'>Kaitlyn Rice</h1>
-        <p className='mb-2 whitespace-pre-line'>{bio}</p>
-      </section>
-      
+    <main className="flex flex-col items-center">
+      <Bio />
       <Experience />
       <Education />
       <Skills />
-      
-      <Link href="/" className="hover:text-pink-600">
-        Go Home
-      </Link>
+      {/* <NavLink item={{ name: "View Resume", url: "/KaitlynRice-Resume.pdf" }} /> */}
     </main> 
   )
 }
