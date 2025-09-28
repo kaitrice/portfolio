@@ -1,7 +1,4 @@
 // import dynamic from 'next/dynamic'
-import { Education } from './education.type'
-import { Project } from './project.type'
-import { Job } from './job.type'
 import { SortableItem } from './type'
 
 export const iconMap = {
