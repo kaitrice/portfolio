@@ -94,7 +94,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 						</div>
 					)}
 					{hasCaseStudy && (
-						<CaseStudyRenderer slug={project.meta.slug} />
+						<CaseStudyRenderer slug={project.meta.slug ?? ""} />
 					)}
 					{hasGallery && <Gallery images={project.details.images} />}
 				</section>
