@@ -67,15 +67,27 @@ export function formatDateToMonthYear(dateStr: string | undefined): string {
 
 export function sortByYear(data: (Education | Job | Project)[]): (Education | Job | Project)[] {
 	return [...data].sort((a, b) => {
-		const getDates = (item: Education | Job | Project) => {
-			const rawEnd = item.dates?.end_date ?? item.details?.dates?.end_date
-			const rawStart = item.dates?.start_date ?? item.details?.dates?.start_date
+		function getDates(item: Education | Job | Project) {
+			let rawStart: string | undefined
+			let rawEnd: string | undefined
+
+			if ("dates" in item) {
+				// Education or Job
+				rawStart = item.dates?.start_date
+				rawEnd = item.dates?.end_date
+			} else if ("details" in item) {
+				// Project
+				rawStart = item.details?.dates?.start_date
+				rawEnd = item.details?.dates?.end_date
+			}
 
 			return {
 				start: parseDate(rawStart),
 				end: parseDate(rawEnd),
-				hasPresentEnd: typeof rawEnd === "string" && (rawEnd.toLowerCase() === "present" || rawEnd.toLowerCase() === "pause"),
-			}
+				hasPresentEnd:
+					typeof rawEnd === "string" &&
+					(rawEnd.toLowerCase() === "present" || rawEnd.toLowerCase() === "pause"),
+			};
 		}
 
 		const aDates = getDates(a)
