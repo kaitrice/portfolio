@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { NavLink } from "./NavLink"
+import Image from "next/image"
 
 export default function Header() {
   return (
@@ -8,7 +9,13 @@ export default function Header() {
         {/* Logo */}
         <div className="flex-shrink-0 flex-1">
           <Link href="/" className="text-xl font-bold">
-            KR
+            {/* KR */}
+            <Image 
+              src = "/logos/logo_nobg.png"
+              alt="KR"
+              width={48}
+              height={48}
+            />
           </Link>
         </div>
 
