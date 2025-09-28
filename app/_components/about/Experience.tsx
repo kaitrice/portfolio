@@ -3,6 +3,13 @@ import { getJobs } from "@/app/_utils/jobs"
 import { formatDateToMonthYear } from "@/app/_utils/utils"
 
 function Job({ job }: { job: JobType }) {
+	const company = job.company
+	const position = job.position
+	const type = job.type
+	const startDate = job?.dates?.start_date ? formatDateToMonthYear(job.dates.start_date) : ""
+	const endDate = job?.dates?.end_date ? formatDateToMonthYear(job.dates.end_date) : ""
+	const hasDates = (startDate || endDate)
+
 	return (
 		<li className="mb-4 ms-4">
 			<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
@@ -10,20 +17,21 @@ function Job({ job }: { job: JobType }) {
 			<article>
 				<header className="flex flex-col sm:flex-row items-start sm:justify-between gap-2">
 					<h3 className="order-2 sm:order-1 text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
-						{job.company}
+						{company}
 					</h3>
-					<time className="order-1 text-sm font-semibold text-gray-500 dark:text-gray-400"  aria-label={`Date worked at ${job.company}`}>
-						{job.dates?.start_date && `${formatDateToMonthYear(job.dates.start_date)}`}
-						{job.dates?.end_date && ` – ${formatDateToMonthYear(job.dates.end_date)}`}
+					{hasDates && (
+						<time className="order-1 text-sm font-semibold text-gray-500 dark:text-gray-400"  aria-label={`Date worked at ${company}`}>
+						{startDate} {endDate && `- ${endDate}`}
 					</time>
+					)}
 				</header>
 
 				<div className="flex flex-col sm:flex-row sm:gap-2 sm:items-center">
-					<h4 className="text-sm text-gray-900 dark:text-white">{job.position}</h4>
-					{job.type && (
+					<h4 className="text-sm text-gray-900 dark:text-white">{position}</h4>
+					{type && (
 						<>
 							<span className="hidden sm:inline text-gray-500 dark:text-gray-400">&bull;</span>
-							<p className="text-sm text-gray-500 dark:text-gray-400">{job.type}</p>
+							<p className="text-sm text-gray-500 dark:text-gray-400">{type}</p>
 						</>
 					)}
 				</div>
