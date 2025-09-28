@@ -32,7 +32,10 @@ export const iconMap = {
 
 export const caseStudyMap = {
 	// "diono-website": dynamic(() => import('@/content/diono-webiste.mdx')),
+	// "diono": dynamic(() => import('@/content/diono-webiste.mdx')),
 }
+
+export type CaseStudyKey = keyof typeof caseStudyMap
 
 export function findIcon(type: string) {
 	const key = type.toLowerCase()
