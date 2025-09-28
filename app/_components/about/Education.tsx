@@ -23,7 +23,7 @@ function School({ school }: { school: EducationType }) {
 					<h4 className="text-sm text-gray-900 dark:text-white">{school.degree}</h4>
 
 					<div className="my-1 text-sm text-gray-500 dark:text-gray-400 space-y-1">
-						{school.minors?.length > 0 && (
+						{school.minors && school.minors?.length > 0 && (
 							<div className="flex flex-col sm:flex-row">
 								<span className="font-bold mr-1">Minors:</span>
 								<ul className="flex flex-wrap gap-1 items-center">
@@ -41,7 +41,7 @@ function School({ school }: { school: EducationType }) {
 							</div>
 						)}
 
-						{school.research?.length > 0 && (
+						{school.research && school.research?.length > 0 && (
 							<div className="flex flex-col sm:flex-row">
 								<span className="font-bold mr-1">Research:</span>
 								<ul className="flex flex-wrap gap-1 items-center">
