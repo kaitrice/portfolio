@@ -2,6 +2,7 @@
 import { Education } from './education.type'
 import { Project } from './project.type'
 import { Job } from './job.type'
+import { SortableItem } from './type'
 
 export const iconMap = {
 	html: 'logos:html-5',
@@ -65,21 +66,11 @@ export function formatDateToMonthYear(dateStr: string | undefined): string {
 	return date.toLocaleDateString("en-US", { year: "numeric", month: "short" })
 }
 
-export function sortByYear(data: (Education | Job | Project)[]): (Education | Job | Project)[] {
+export function sortByYear<T extends SortableItem>(data: T[]): T[] {
 	return [...data].sort((a, b) => {
-		function getDates(item: Education | Job | Project) {
-			let rawStart: string | undefined
-			let rawEnd: string | undefined
-
-			if ("dates" in item) {
-				// Education or Job
-				rawStart = item.dates?.start_date
-				rawEnd = item.dates?.end_date
-			} else if ("details" in item) {
-				// Project
-				rawStart = item.details?.dates?.start_date
-				rawEnd = item.details?.dates?.end_date
-			}
+		const getDates = (item: SortableItem) => {
+			const rawEnd = item.dates?.end_date ?? item.details?.dates?.end_date
+			const rawStart = item.dates?.start_date ?? item.details?.dates?.start_date
 
 			return {
 				start: parseDate(rawStart),
@@ -87,7 +78,7 @@ export function sortByYear(data: (Education | Job | Project)[]): (Education | Jo
 				hasPresentEnd:
 					typeof rawEnd === "string" &&
 					(rawEnd.toLowerCase() === "present" || rawEnd.toLowerCase() === "pause"),
-			};
+			}
 		}
 
 		const aDates = getDates(a)
@@ -103,10 +94,6 @@ export function sortByYear(data: (Education | Job | Project)[]): (Education | Jo
 
 		const aStart = aDates.start?.getTime() ?? Infinity
 		const bStart = bDates.start?.getTime() ?? Infinity
-		return bStart - aStart
+		return bStart - aStart;
 	})
 }
-
-
-
-

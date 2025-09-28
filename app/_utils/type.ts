@@ -18,3 +18,8 @@ export type Link = {
     type: string
     url: string
 }
+
+export type SortableItem = {
+	dates?: { start_date: string; end_date?: string }
+	details?: { dates?: { start_date: string; end_date?: string } }
+}
