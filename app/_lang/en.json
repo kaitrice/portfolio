@@ -112,7 +112,7 @@
                 "meta": {
                     "slug": "the-lucky-effect",
                     "title": "The Lucky Effect Website",
-                    "description": "Design and developed band website consistent with brand identity."
+                    "description": "Designed and developed band website consistent with brand identity."
                 },
                 "details": {
                     "company": "The Lucky Effect",
@@ -215,9 +215,32 @@
         }
     ],
     "skills": {
-        "languages": [ "HTML", "CSS", "Java", "JavaScript", "TypeScript", "MySQL", "PostgreSQL" ],
-        "libraries & frameworks": [ "TailwindCSS", "React", "Next", "Node", "Express" ],
-        "tools": [ "git", "Vercel", "Expo", "Figma", "Postman", "Firebase" ]
+        "languages": [ 
+            "Java", 
+            "Python",
+            "JavaScript", 
+            "TypeScript",
+            "HTML", 
+            "CSS"
+        ],
+        "libraries & frameworks": [ 
+            "MySQL", 
+            "PostgreSQL",
+            "TailwindCSS", 
+            "React", 
+            "Next", 
+            "Node", 
+            "Express"
+        ],
+        "tools": [
+            "Docker",
+            "Vercel", 
+            "Expo", 
+            "Git",
+            "Firebase",
+            "Postman",
+            "Figma"
+        ]
     },
     "footer": {
         "content": "Kaitlyn Rice. All rights reserved."
