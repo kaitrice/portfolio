@@ -7,7 +7,7 @@ export default function CaseStudyRenderer({ slug }: { slug: string }) {
 
 	return (
 		<article>
-			<CaseStudy />
+			{/* <CaseStudy /> */}
 		</article>
 	)
 }
