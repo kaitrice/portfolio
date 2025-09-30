@@ -1,14 +1,12 @@
 import { Job as JobType } from "@/app/_utils/job.type"
 import { getJobs } from "@/app/_utils/jobs"
-import { formatDateToMonthYear } from "@/app/_utils/utils"
+import { Dates } from "../common/Dates"
 
 function Job({ job }: { job: JobType }) {
 	const company = job.company
 	const position = job.position
 	const type = job.type
-	const startDate = job?.dates?.start_date ? formatDateToMonthYear(job.dates.start_date) : ""
-	const endDate = job?.dates?.end_date ? formatDateToMonthYear(job.dates.end_date) : ""
-	const hasDates = (startDate || endDate)
+	const hasDates = (job?.dates?.start_date || job?.dates?.end_date)
 
 	return (
 		<li className="mb-4 ms-4">
@@ -20,9 +18,7 @@ function Job({ job }: { job: JobType }) {
 						{company}
 					</h3>
 					{hasDates && (
-						<time className="order-1 text-sm font-semibold text-gray-500 dark:text-gray-400"  aria-label={`Date worked at ${company}`}>
-						{startDate} {endDate && `- ${endDate}`}
-					</time>
+							<Dates start_date={job.dates?.start_date ?? ""} end_date={job.dates?.end_date ?? ""} />
 					)}
 				</header>
 

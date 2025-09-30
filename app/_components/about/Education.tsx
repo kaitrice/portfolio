@@ -2,14 +2,13 @@ import { getEducation } from "@/app/_utils/education"
 import { ProfilePicture } from "../common/ProfilePicture"
 import { Education as EducationType } from "@/app/_utils/education.type"
 import { formatDateToMonthYear } from "@/app/_utils/utils"
+import { Dates } from "../common/Dates"
 
 
 
 function School({ school }: { school: EducationType }) {
 	const name = school.name
-	const startDate = school?.dates?.start_date ? formatDateToMonthYear(school.dates.start_date) : ""
-	const endDate = school?.dates?.end_date ? formatDateToMonthYear(school.dates.end_date) : ""
-	const hasDates = (startDate || endDate)
+	const hasDates = (school.dates?.start_date || school.dates?.end_date)
 	const minors = Array.isArray(school?.minors) ? school.minors : []
 	const research = Array.isArray(school?.research) ? school.research : []
 
@@ -24,9 +23,7 @@ function School({ school }: { school: EducationType }) {
 							{name}
 						</h3>
 						{hasDates &&
-							<time className="order-1 text-sm font-semibold text-gray-500 dark:text-gray-400" aria-label={`Date attended ${name}`}>
-								{startDate} {endDate && ` – ${endDate}`}
-							</time>
+							<Dates start_date={school.dates?.start_date ?? ""} end_date={school.dates?.end_date ?? ""} />
 						}
 					</header>
 

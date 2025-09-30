@@ -17,7 +17,7 @@
                 "end_date": "2023-12"
             },
             "location": "Bellingham, WA",
-            "degree": "BSc Computer Science",
+            "degree": "BS Computer Science",
             "minors": ["User Experience Design", "Psychology"],
             "research": [ "Web accessibility", "Affective computing for mental health" ],
             "image": { "url": "https://marcom.wwu.edu/sites/marcom.wwu.edu/files/2021-01/WWU_MakeWaves_Stacked_RGB%20%281%29.png", "alt": "Western Washington University Logo" }
@@ -197,11 +197,11 @@
     "jobs": [
         {
             "company": "Diono",
-            "position": "eCommerce Operations Assistant",
+            "position": "Ecommerce Operations Assistant",
             "type": "Full-Time",
             "dates": {
                 "start_date": "2023-08",
-                "end_date": "Present"
+                "end_date": "2025-09"
             }
         },
         {
