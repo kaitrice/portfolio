@@ -218,10 +218,10 @@
         "languages": [ 
             "Java", 
             "Python",
-            "JavaScript", 
-            "TypeScript",
             "HTML", 
-            "CSS"
+            "CSS",
+            "JavaScript", 
+            "TypeScript"
         ],
         "libraries & frameworks": [ 
             "MySQL", 
