@@ -11,10 +11,18 @@ export default function Header() {
           <Link href="/" className="text-xl font-bold">
             {/* KR */}
             <Image 
+              src = "/logos/logo_nobg_dark.png"
+              alt="KR"
+              width={48}
+              height={48}
+              className="block dark:hidden"
+            />
+            <Image 
               src = "/logos/logo_nobg.png"
               alt="KR"
               width={48}
               height={48}
+              className="hidden dark:block"
             />
           </Link>
         </div>
