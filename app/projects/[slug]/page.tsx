@@ -75,7 +75,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 	const hasGallery = (project.details.images?.length ?? 0) > 1
 
 	return (
-		<main>
+		<main className='my-4'>
 			<header className="md:sticky md:top-0 md:z-10 bg-neutral-50 dark:bg-neutral-900 md:pt-6 md:pb-6">
 				<h1 className="text-4xl font-bold mb-2">{project.meta.title}</h1>
 				<p className="text-lg text-neutral-700 dark:text-neutral-300">{project.meta.description}</p>

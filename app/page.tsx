@@ -3,7 +3,7 @@ import { Highlight } from "./_components/about/Bio"
 
 export default function Home() {
   return (
-    <main>
+    <main className="my-4">
       <Highlight />
       <RecentProjects />
     </main>

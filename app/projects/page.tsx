@@ -15,7 +15,7 @@ export default function ProjectsIndex() {
 	const projectData = getProjects()
 
 	return (
-		<main>
+		<main className="my-4">
 			<h1 className='text-4xl font-bold mb-4'>{content.title}</h1>
 			<section>
 				<Projects data={projectData} />
