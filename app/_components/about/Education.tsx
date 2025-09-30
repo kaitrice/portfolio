@@ -1,10 +1,7 @@
 import { getEducation } from "@/app/_utils/education"
 import { ProfilePicture } from "../common/ProfilePicture"
 import { Education as EducationType } from "@/app/_utils/education.type"
-import { formatDateToMonthYear } from "@/app/_utils/utils"
 import { Dates } from "../common/Dates"
-
-
 
 function School({ school }: { school: EducationType }) {
 	const name = school.name
