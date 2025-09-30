@@ -19,10 +19,10 @@ export function Skills() {
 	return (
 		<section className="w-full">
 			<h2 className="text-2xl font-bold ">Tech Stack</h2>
-			<div className="flex flex-col gap-4 mt-6">
+			<div className="flex flex-col gap-2 mt-2">
 				{Object.entries(skills).map(([category, skillList]) => (
 					<div key={category} className="p-4">
-						<h3 className="font-semibold capitalize mb-4">
+						<h3 className="font-semibold text-lg capitalize mb-4">
 							{category}
 						</h3>
 						<div className="flex flex-wrap gap-4 md:gap-8">
