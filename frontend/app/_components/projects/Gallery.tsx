@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Image as ProjectImage } from "@/app/_utils/type"
+import { Image as ProjectImage } from "@/frontend/app/_utils/type"
 import { Carousel, Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react"
 
 export function Gallery({ images }: { images: ProjectImage[] }) {

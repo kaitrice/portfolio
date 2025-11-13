@@ -1,5 +1,5 @@
-import { Dates as DateProps } from "@/app/_utils/type"
-import { formatDateToMonthYear } from "@/app/_utils/utils"
+import { Dates as DateProps } from "@/frontend/app/_utils/type"
+import { formatDateToMonthYear } from "@/frontend/app/_utils/utils"
 
 export function Dates({ start_date, end_date }: DateProps) {
     const startDate = formatDateToMonthYear(start_date)

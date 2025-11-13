@@ -1,6 +1,6 @@
-import { getEducation } from "@/app/_utils/education"
+import { getEducation } from "@/frontend/app/_utils/education"
 import { ProfilePicture } from "../common/ProfilePicture"
-import { Education as EducationType } from "@/app/_utils/education.type"
+import { Education as EducationType } from "@/frontend/app/_utils/education.type"
 import { Dates } from "../common/Dates"
 
 function School({ school }: { school: EducationType }) {

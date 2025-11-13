@@ -1,9 +1,9 @@
 import { Project as ProjectType } from '../../_utils/project.type'
-import { formatDateToMonthYear } from '@/app/_utils/utils'
-import { getProjects } from '@/app/_utils/projects'
+import { formatDateToMonthYear } from '@/frontend/app/_utils/utils'
+import { getProjects } from '@/frontend/app/_utils/projects'
 import { NavLink } from '../common/NavLink'
 import { IconLink } from '../common/Icon'
-import { Link } from '@/app/_utils/type'
+import { Link } from '@/frontend/app/_utils/type'
 import { Tools } from './Tools'
 
 function Links({ links }: { links: Link[] }) {

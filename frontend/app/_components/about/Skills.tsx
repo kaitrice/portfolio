@@ -1,4 +1,4 @@
-import { findIcon } from "@/app/_utils/utils";
+import { findIcon } from "@/frontend/app/_utils/utils";
 import { Icon } from '@iconify/react'
 import data from "../../_lang/en.json"
 
