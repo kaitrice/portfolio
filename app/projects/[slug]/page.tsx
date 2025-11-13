@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -7,7 +8,6 @@ import { getProject, getProjects } from '@/app/_utils/projects'
 import { IconLink } from '@/app/_components/common/Icon'
 import { Gallery } from '@/app/_components/projects/Gallery'
 import { Tools } from '@/app/_components/projects/Tools'
-import CaseStudyRenderer from '@/app/_components/projects/CaseStudy'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params
@@ -94,7 +94,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 						</div>
 					)}
 					{hasCaseStudy && (
-						<CaseStudyRenderer slug={project.meta.slug ?? ""} />
+						<p></p>
 					)}
 					{hasGallery && <Gallery images={project.details.images} />}
 				</section>
