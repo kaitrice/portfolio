@@ -1,5 +1,4 @@
-import { Job as JobType } from "@/frontend/app/_utils/job.type"
-import { getJobs } from "@/frontend/app/_utils/jobs"
+import { getJobs, JobType } from "@/app/_utils"
 import { Dates } from "../common/Dates"
 
 function Job({ job }: { job: JobType }) {

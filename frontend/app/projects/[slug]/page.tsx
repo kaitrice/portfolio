@@ -2,12 +2,10 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { Project } from '@/frontend/app/_utils/project.type'
-import { formatDateToMonthYear } from '@/frontend/app/_utils/utils'
-import { getProject, getProjects } from '@/frontend/app/_utils/projects'
-import { IconLink } from '@/frontend/app/_components/common/Icon'
-import { Gallery } from '@/frontend/app/_components/projects/Gallery'
-import { Tools } from '@/frontend/app/_components/projects/Tools'
+import { IconLink } from '@/app/_components/common/Icon'
+import { Gallery } from '@/app/_components/projects/Gallery'
+import { Tools } from '@/app/_components/projects/Tools'
+import { formatDateToMonthYear, getProject, getProjects, ProjectType } from '@/app/_utils'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params
@@ -29,7 +27,7 @@ export async function generateStaticParams() {
 	}))
 }
 
-function Details({ project }: { project: Project }) {
+function Details({ project }: { project: ProjectType }) {
     return (
         <div className="flex-shrink-0">
             <h2>Overview</h2>

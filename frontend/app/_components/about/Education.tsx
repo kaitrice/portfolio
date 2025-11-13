@@ -1,7 +1,6 @@
-import { getEducation } from "@/frontend/app/_utils/education"
 import { ProfilePicture } from "../common/ProfilePicture"
-import { Education as EducationType } from "@/frontend/app/_utils/education.type"
 import { Dates } from "../common/Dates"
+import { EducationType, getEducation } from "@/app/_utils"
 
 function School({ school }: { school: EducationType }) {
 	const name = school.name
