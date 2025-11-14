@@ -12,17 +12,17 @@
         { "PostgreSQL": "logos:postgresql" },
         { "TailwindCSS": "logos:tailwindcss-icon" },
         { "React": "logos:react" },
-        { "Next": "simple-icons:nextdotjs" },
+        { "Next": "logos:nextjs-icon" },
         { "Node": "logos:nodejs-icon"},
         { "Express": "simple-icons:express" }
     ],
     "tools": [
         { "Docker": "logos:docker-icon" },
-        { "Vercel": "simple-icons:vercel" },
-        { "Expo": "simple-icons:expo" },
         { "Git": "logos:git-icon" },
+        { "Azure": "logos:azure-icon" },
         { "Firebase": "logos:firebase-icon" },
-        { "Postman": "logos:postman-icon" },
+        { "Vercel": "logos:vercel-icon" },
+        { "Expo": "logos:expo-icon" },
         { "Figma": "logos:figma" }
     ]
 }
