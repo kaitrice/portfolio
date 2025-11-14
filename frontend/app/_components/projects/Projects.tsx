@@ -1,5 +1,5 @@
-import { Tools, IconLink, NavLink } from '..'
-import { formatDateToMonthYear, getProjects, LinkType, ProjectType } from '@/app/_utils'
+import { Tools, IconLink, NavLink, Dates } from '..'
+import { getProjects, LinkType, ProjectType } from '@/app/_utils'
 
 function Links({ links }: { links: LinkType[] }) {
   if (!links?.length) return null
@@ -14,13 +14,14 @@ function Links({ links }: { links: LinkType[] }) {
 }
 
 function Project({ project }: { project: ProjectType }) {
+  const details = project.details
+
   return (
     <article className="flex flex-col sm:flex-row gap-1 sm:gap-6 items-start">
-      {/* Dates */}
-      <time className='text-sm font-semibold text-gray-500 dark:text-gray-400'>
-        {formatDateToMonthYear(project.details.dates?.start_date)} {project.details.dates?.end_date && `– ${formatDateToMonthYear(project.details.dates?.end_date)}`}
-      </time>
-
+      <span className="font-semibold">
+        <Dates start_date={details.dates.start_date}  end_date={details.dates?.end_date} />
+      </span>
+      
       <span>
         <header className="flex flex-col sm:flex-row items-start gap-2 sm:gap-4 mb-1">
           {/* Title */}
@@ -33,7 +34,7 @@ function Project({ project }: { project: ProjectType }) {
 
         <div className="text-gray-500 dark:text-gray-400">
           <p className="mb-1 text-sm">{project.meta.description}</p>
-          <div className="text-xs"><Tools tools={project.details.tools} /></div>
+          <Tools tools={project.details.tools} />
         </div>
       </span>
     </article>

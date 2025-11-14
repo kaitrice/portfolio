@@ -5,7 +5,7 @@ export type Job = {
 	position: string
 	details:  {
 		type: string
-		dates?: DateType
+		dates: DateType
 		description?: string
 	}
 }

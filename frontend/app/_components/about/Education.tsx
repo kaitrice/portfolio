@@ -17,9 +17,9 @@ function School({ school }: { school: EducationType }) {
 						<h3 className="order-2 sm:order-1 flex-1 text-lg sm:text-xl font-bold">
 							{name}
 						</h3>
-						{hasDates &&
+						<span className="order-1 font-semibold">
 							<Dates start_date={school.dates?.start_date ?? ""} end_date={school.dates?.end_date ?? ""} />
-						}
+						</span>
 					</header>
 
 					<h4 className="text-sm text-gray-900 dark:text-white">{school.degree}</h4>

@@ -4,8 +4,6 @@ import { Dates } from ".."
 function Job({ job }: { job: JobType }) {
 	const company = job.company
 	const position = job.position
-	const type = job.details.type
-	const hasDates = (job?.details.dates?.start_date || job?.details.dates?.end_date)
 
 	return (
 		<li className="mb-4 ms-4">
@@ -16,17 +14,17 @@ function Job({ job }: { job: JobType }) {
 					<h3 className="order-2 sm:order-1 text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
 						{company}
 					</h3>
-					{hasDates && (
-							<Dates start_date={job.details.dates?.start_date ?? ""} end_date={job.details.dates?.end_date ?? ""} />
-					)}
+					<span className="order-1 font-semibold">
+						<Dates start_date={job.details.dates.start_date ?? ""} end_date={job.details.dates.end_date} />
+					</span>
 				</header>
 
 				<div className="flex flex-col sm:flex-row sm:gap-2 sm:items-center">
 					<h4 className="text-sm text-gray-900 dark:text-white">{position}</h4>
-					{type && (
+					{job.details.type && (
 						<>
 							<span className="hidden sm:inline text-gray-500 dark:text-gray-400">&bull;</span>
-							<p className="text-sm text-gray-500 dark:text-gray-400">{type}</p>
+							<p className="text-sm text-gray-500 dark:text-gray-400">{job.details.type}</p>
 						</>
 					)}
 				</div>

@@ -13,7 +13,7 @@ export type CaseStudy = {
 
 export type Details = {
 	company?: string
-	dates?: DateType
+	dates: DateType
 	tools: string[]
 	images: ImageType[]
 	links?: LinkType[]
