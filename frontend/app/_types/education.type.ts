@@ -1,12 +1,12 @@
-import { Dates, Image } from "./type"
+import { DateType, ImageType } from "."
 
 export type Education = {
     name: string
-    dates?: Dates
+    dates?: DateType
     location: string
     degree: string
     minors?: string[]
     research?: string[]
-    image: Image
+    image: ImageType
 }
 
