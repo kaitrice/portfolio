@@ -1,39 +1,4 @@
-// import dynamic from 'next/dynamic'
-import { ProjectType } from '../_types'
-
 export const iconMap = {
-	html: 'logos:html-5',
-	css: 'logos:css-3',
-	javascript: 'logos:javascript',
-	typescript: 'logos:typescript-icon',
-	java: 'logos:java',
-	python: 'logos:python',
-	swift: 'logos:swift',
-
-	tailwindcss: 'logos:tailwindcss-icon',
-	react: 'logos:react',
-	next: 'simple-icons:nextdotjs',
-	node: 'logos:nodejs-icon',
-	mysql: 'logos:mysql-icon',
-	postgresql: 'logos:postgresql',
-	express: 'simple-icons:express',
-	flask: 'simple-icons:flask',
-	django: 'simple-icons:django',
-	tensorflow: 'simple-icons:tensorflow',
-	pytorch: 'simple-icons:pytorch',
-	pandas: 'simple-icons:pandas',
-	numpy: 'simple-icons:numpy',
-	
-	firebase: 'logos:firebase-icon',
-	vercel: 'simple-icons:vercel',
-	expo: 'simple-icons:expo',
-	figma: 'logos:figma',
-	postman: 'logos:postman-icon',
-	git: "logos:git-icon",
-	docker: "logos:docker-icon",
-	azure: "logos:azure-icon",
-	aws: "logos:aws",
-
 	github: "mdi:github",
 	linkedin: "mdi:linkedin",
 	email: "mdi:email-outline",

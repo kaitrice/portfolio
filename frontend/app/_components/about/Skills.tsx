@@ -1,14 +1,12 @@
 import { Icon } from '@iconify/react'
-import { findIcon } from '@/app/_utils'
 import skillsData from "../../_data/skills.json"
 
-function Skill({ skill }: { skill: string }) {
-	const icon = findIcon(skill)
-	
+function Skill({ name, icon }: { name: string, icon: string }) {
+
 	return (
-		<div key={skill} className="flex flex-col items-center gap-2 hover:scale-125 transition">
-			{icon && <Icon icon={icon} width={56} height={56} />}
-			<span className="font-semibold text-sm">{skill}</span>
+		<div className="flex flex-col items-center gap-2 hover:scale-125 transition">
+			<Icon icon={icon} width={56} height={56} />
+			<span className="font-semibold text-sm">{name}</span>
 		</div>
 	)
 }
@@ -24,9 +22,11 @@ export function Skills() {
 							{category}
 						</h3>
 						<div className="flex flex-wrap gap-4 md:gap-8">
-							{skillList.map((skill, index) => (
-								<Skill key={index} skill={skill} />
-							))}
+							{skillList.map((skillObj, index) => {
+								const name = Object.keys(skillObj)[0]
+								const icon = Object.values(skillObj)[0]
+								return <Skill key={index} name={name} icon={icon} />
+							})}
 						</div>
 					</div>
 				))}

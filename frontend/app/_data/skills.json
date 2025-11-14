@@ -1,28 +1,28 @@
 {
     "languages": [
-        "Java",
-        "Python",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript"
+        { "Java": "logos:java" },
+        { "Python": "logos:python" },
+        { "HTML": "logos:html-5" },
+        { "CSS": "logos:css-3" },
+        { "JavaScript": "logos:javascript" },
+        { "TypeScript": "logos:typescript-icon" }
     ],
     "libraries & frameworks": [
-        "MySQL",
-        "PostgreSQL",
-        "TailwindCSS",
-        "React",
-        "Next",
-        "Node",
-        "Express"
+        { "MySQL": "logos:mysql-icon" },
+        { "PostgreSQL": "logos:postgresql" },
+        { "TailwindCSS": "logos:tailwindcss-icon" },
+        { "React": "logos:react" },
+        { "Next": "simple-icons:nextdotjs" },
+        { "Node": "logos:nodejs-icon"},
+        { "Express": "simple-icons:express" }
     ],
     "tools": [
-        "Docker",
-        "Vercel",
-        "Expo",
-        "Git",
-        "Firebase",
-        "Postman",
-        "Figma"
+        { "Docker": "logos:docker-icon" },
+        { "Vercel": "simple-icons:vercel" },
+        { "Expo": "simple-icons:expo" },
+        { "Git": "logos:git-icon" },
+        { "Firebase": "logos:firebase-icon" },
+        { "Postman": "logos:postman-icon" },
+        { "Figma": "logos:figma" }
     ]
 }
