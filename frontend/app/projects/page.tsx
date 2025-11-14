@@ -1,8 +1,7 @@
-import type { Metadata } from "next"
-import { getProjects } from '../_utils/projects'
-import { Projects } from '../_components/projects/Projects'
-import { NavLink } from "../_components/common/NavLink"
 import data from "../_lang/en.json"
+import type { Metadata } from "next"
+import { getProjects } from "../_utils"
+import { NavLink, Projects } from "../_components"
 
 const content = data.projects
 

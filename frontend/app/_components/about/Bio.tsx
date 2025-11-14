@@ -1,7 +1,6 @@
-import { Location } from "./Location"
-import data from "../../_lang/en.json"
-import { ProfilePicture } from "../common/ProfilePicture"
 import Link from "next/link"
+import data from "../../_lang/en.json"
+import { ProfilePicture, Location } from ".."
 
 const content = data.about
 

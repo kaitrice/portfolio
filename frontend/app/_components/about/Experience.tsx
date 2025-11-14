@@ -1,5 +1,5 @@
 import { getJobs, JobType } from "@/app/_utils"
-import { Dates } from "../common/Dates"
+import { Dates } from ".."
 
 function Job({ job }: { job: JobType }) {
 	const company = job.company

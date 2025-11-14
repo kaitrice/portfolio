@@ -1,11 +1,8 @@
-
-import { Metadata } from 'next'
 import Image from 'next/image'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { IconLink } from '@/app/_components/common/Icon'
-import { Gallery } from '@/app/_components/projects/Gallery'
-import { Tools } from '@/app/_components/projects/Tools'
 import { formatDateToMonthYear, getProject, getProjects, ProjectType } from '@/app/_utils'
+import { Gallery, IconLink, Tools } from '@/app/_components'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params

@@ -1,9 +1,8 @@
 import { Icon as DefaultIcon } from "@iconify/react/dist/iconify.js"
-import { NavLink } from "./NavLink"
-import { Link } from "@/app/_utils/type"
-import { findIcon } from "@/app/_utils/utils"
+import { findIcon, LinkType } from "@/app/_utils"
+import { NavLink } from ".."
 
-export function IconLink({ link }: { link: Link }) {
+export function IconLink({ link }: { link: LinkType }) {
     const icon = findIcon(link.type)
 
     const item = {

@@ -1,5 +1,4 @@
-import { ProfilePicture } from "../common/ProfilePicture"
-import { Dates } from "../common/Dates"
+import { Dates, ProfilePicture } from ".."
 import { EducationType, getEducation } from "@/app/_utils"
 
 function School({ school }: { school: EducationType }) {

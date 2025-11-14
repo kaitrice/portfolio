@@ -1,8 +1,5 @@
-import { NavLink } from '../common/NavLink'
-import { IconLink } from '../common/Icon'
-import { Tools } from './Tools'
+import { Tools, IconLink, NavLink } from '..'
 import { formatDateToMonthYear, getProjects, LinkType, ProjectType } from '@/app/_utils'
-
 
 function Links({ links }: { links: LinkType[] }) {
   if (!links?.length) return null
