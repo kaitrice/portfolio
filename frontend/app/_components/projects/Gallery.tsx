@@ -26,10 +26,11 @@ export function Gallery({ images }: { images: ImageType[] }) {
 	}
 
 	return (
-		<article className="mt-6">
+		<section className="mt-6">
 			<h2>Gallery</h2>
+            <p>test</p>
 
-			<div className="min-h-[70vw] md:min-h-auto w-full max-w-4xl mx-auto aspect-video relative">
+			<article className="min-h-[70vw] md:min-h-auto w-full max-w-4xl mx-auto aspect-video relative">
 				<Carousel slide={false} theme={{
                     control: {
                         base: "bg-pink-500/60 group-hover:bg-pink-500/90 group-focus:ring-pink-500/30 dark:bg-pink-500/60 dark:group-hover:bg-pink-500/90 dark:group-focus:ring-pink-500/30",
@@ -53,7 +54,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
 						</div>
 					))}
 				</Carousel>
-			</div>
+			</article>
 
 			<Modal
                 show={open}
@@ -101,6 +102,6 @@ export function Gallery({ images }: { images: ImageType[] }) {
                     )}
                 </ModalFooter>
             </Modal>
-		</article>
+		</section>
 	)
 }

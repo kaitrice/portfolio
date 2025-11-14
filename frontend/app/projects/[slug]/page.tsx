@@ -36,24 +36,27 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 		<main className='my-4'>
 			<header className="md:sticky md:top-0 md:z-10 bg-neutral-50 dark:bg-neutral-900 md:pt-6 md:pb-6">
 				<h1 className="text-4xl font-bold mb-2">{project.meta.title}</h1>
-				<p className="text-lg text-neutral-700 dark:text-neutral-300">{project.meta.description}</p>
+				<p className="text-lg text-gray-500 dark:text-gray-400">{project.meta.description}</p>
 			</header>
 
 			<div className="flex flex-col md:grid md:grid-cols-4 gap-10 md:gap-16 mt-10">
-				<section className="order-2 md:order-0 md:col-span-3 space-y-10">
-					{details.images?.length > 0 && (
-						<div className="relative w-full aspect-video rounded overflow-hidden">
-							<Image
-								src={details.images[0].url}
-								alt={details.images[0].alt}
-								fill
-								className="object-cover"
-							/>
-						</div>
-					)}
+				<div className="order-2 md:order-0 md:col-span-3 space-y-10">
+					<section>
+						{details.images?.length > 0 && (
+							<article className="relative w-full aspect-video rounded overflow-hidden">
+								<Image
+									src={details.images[0].url}
+									alt={details.images[0].alt}
+									fill
+									className="object-cover"
+								/>
+							</article>
+						)}
+					</section>
+
 					{project.caseStudy && <CaseStudy caseStudy={project.caseStudy} />}
 					{hasGallery && <Gallery images={details.images} />}
-				</section>
+				</div>
 
 				<aside className="order-1 md:sticky md:top-30 md:self-start md:z-20">
 					<Details details={details} />
