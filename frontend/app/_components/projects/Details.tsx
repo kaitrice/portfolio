@@ -4,7 +4,7 @@ import { Dates, IconLink, Tools } from "..";
 export function Details({ details }: { details: DetailType }) {
     return (
         <div className="flex-shrink-0">
-            <h2>Overview</h2>
+            <h2 className="">Overview</h2>
 
             <div className="flex flex-col gap-4">
                 {details.company && (

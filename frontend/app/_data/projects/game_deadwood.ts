@@ -7,7 +7,7 @@ export const deadwood: ProjectType = {
         slug: "deadwood"
     },
     details: {
-        company: undefined,
+        company: "Western Washington University | Object Oriented Design",
         dates: {
             start_date: "2023-03",
             end_date: "2023-06"

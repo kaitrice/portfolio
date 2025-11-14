@@ -1,11 +1,12 @@
 import { DateType, ImageType, LinkType, MetaType } from "."
 
 export type CaseStudy = {
+	project_description?: string
 	problem: string
-	cause: string
-	impact: string
+	cause?: string
+	impact?: string
 	solution: string
-	alt_solution: string
+	alt_solution?: string
 	challenges: string[]
 	results?: string
 }

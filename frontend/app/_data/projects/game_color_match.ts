@@ -7,7 +7,7 @@ export const color_match: ProjectType = {
         slug: "color-match"
     },
     details: {
-        company: undefined,
+        company: "Western Washington University, Dynamic Web Pages",
         dates: {
             "start_date": "2021-09",
             "end_date": "2022-03"

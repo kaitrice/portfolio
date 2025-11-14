@@ -28,7 +28,6 @@ export function Gallery({ images }: { images: ImageType[] }) {
 	return (
 		<section className="mt-6">
 			<h2>Gallery</h2>
-            <p>test</p>
 
 			<article className="min-h-[70vw] md:min-h-auto w-full max-w-4xl mx-auto aspect-video relative">
 				<Carousel slide={false} theme={{
