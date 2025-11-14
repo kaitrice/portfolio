@@ -1,5 +1,16 @@
 [
     {
+        "company": "The Lucky Effect",
+        "position": "Full Stack Devleoper",
+        "details": {
+            "type": "Freelance Contract",
+            "dates": {
+                "start_date": "2025-01",
+                "end_date": "2025-11"
+            }
+        }
+    },
+    {
         "company": "Diono",
         "position": "Ecommerce Operations Assistant",
         "details": {

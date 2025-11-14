@@ -23,7 +23,7 @@ function Job({ job }: { job: JobType }) {
 					<h4 className="text-sm text-gray-900 dark:text-white">{position}</h4>
 					{job.details.type && (
 						<>
-							<span className="hidden sm:inline text-gray-500 dark:text-gray-400">&bull;</span>
+							<span className="hidden sm:block text-gray-500 dark:text-gray-400">&bull;</span>
 							<p className="text-sm text-gray-500 dark:text-gray-400">{job.details.type}</p>
 						</>
 					)}
