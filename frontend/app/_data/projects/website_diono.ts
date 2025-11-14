@@ -20,7 +20,7 @@ export const diono_website: ProjectType = {
         images: [
             {
                 url: "/images/projects/diono-website/thumbnail.avif",
-                alt: "2 computers with the Diono homepage and a product page on the screen."
+                alt: "2 computers with the Diono homepage to the left and a product page on the screen to the right."
             },
             {
                 url: "/images/projects/diono-website/image2.avif",
@@ -56,7 +56,9 @@ export const diono_website: ProjectType = {
         impact: "",
         solution: "",
         alt_solution: "",
-        challenges: "",
+        challenges: [
+            ""
+        ],
         results: ""
     }
 }

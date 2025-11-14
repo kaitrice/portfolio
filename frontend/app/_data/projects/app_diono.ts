@@ -20,7 +20,7 @@ export const diono_app: ProjectType = {
         images: [
             {
                 url: "/images/projects/safety-hub-thumbnail.avif",
-                alt: "alt"
+                alt: "4 images of phones showcasing login, home, product detail, and tips screens."
             }
         ],
         links: undefined
@@ -31,7 +31,9 @@ export const diono_app: ProjectType = {
         impact: "",
         solution: "",
         alt_solution: "",
-        challenges: "",
+        challenges: [
+            ""
+        ],
         results: ""
     }
 }

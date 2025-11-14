@@ -16,7 +16,7 @@ export const deadwood: ProjectType = {
         images: [
             {
                 url: "/images/projects/deadwood-thumbnail.avif",
-                alt: "alt"
+                alt: "Deadwood icon with old west background"
             }
         ],
         links: [

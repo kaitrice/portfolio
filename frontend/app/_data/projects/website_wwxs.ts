@@ -23,7 +23,7 @@ export const wwxs_website: ProjectType = {
         images: [
             {
                 url: "/images/projects/wwxs-thumbnail.avif",
-                alt: "alt"
+                alt: "2 images of computes, to the left showcases sensor data screen and to the right showcases device data."
             }
         ],
         links: [
@@ -43,7 +43,9 @@ export const wwxs_website: ProjectType = {
         impact: "",
         solution: "",
         alt_solution: "",
-        challenges: "",
+        challenges: [
+            ""
+        ],
         results: ""
     }
 }

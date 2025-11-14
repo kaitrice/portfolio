@@ -21,7 +21,7 @@ export const tle_website: ProjectType = {
         images: [
             {
                 url: "/images/projects/tle-thumbnail.avif",
-                alt: "alt"
+                alt: "1 image of a computer with a coming soon homepage displayed."
             }
         ],
         links: [
@@ -41,7 +41,9 @@ export const tle_website: ProjectType = {
         impact: "",
         solution: "",
         alt_solution: "",
-        challenges: "",
+        challenges: [
+            ""
+        ],
         results: ""
     }
 }

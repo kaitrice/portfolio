@@ -20,7 +20,7 @@ export const color_match: ProjectType = {
         images: [
             {
                 "url": "/images/projects/color-match-thumbnail.avif",
-                "alt": "alt"
+                "alt": "Image of laptop with game loading screen"
             }
         ],
         links: [
