@@ -6,30 +6,34 @@ export function CaseStudy({ caseStudy }: { caseStudy: CaseStudyType }) {
         <section className="flex-shrink-0 mt-6">
             <article>
 			    <h2>Problem</h2>
-                {caseStudy.problem}
+                <p>{caseStudy.problem}</p>
             </article>
             
             <article>
 			    <h2>Cause & Impact</h2>
-                {caseStudy.cause}
-                {caseStudy.impact}
+                <p className="mb-2">{caseStudy.cause}</p>
+                <p>{caseStudy.impact}</p>
             </article>
 
             <article>
-                <h2>Solutions</h2>
-                {caseStudy.solution}
-                {caseStudy.alt_solution}
+                <h2>Solution</h2>
+                <p className="mb-2">{caseStudy.solution}</p>
+                <p>{caseStudy.alt_solution}</p>
             </article>
 
             <article>
                 <h2>Challenges</h2>
-                {caseStudy.challenges}
+                {caseStudy.challenges.map((item, index) => (
+                    <p key={index}>{item}</p>
+                ))}
             </article>
 
+            {caseStudy.results && 
             <article>
                 <h2>Results</h2>
-                {caseStudy.results}
+                <p>{caseStudy.results}</p>
             </article>
+            }
         </section>
     )
 }

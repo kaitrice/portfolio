@@ -4,11 +4,10 @@ export type CaseStudy = {
 	problem: string
 	cause: string
 	impact: string
-
 	solution: string
 	alt_solution: string
-	challenges: string
-	results: string
+	challenges: string[]
+	results?: string
 }
 
 export type Details = {
