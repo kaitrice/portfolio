@@ -1,10 +1,9 @@
 import type { NextConfig } from "next"
-import createMDX from '@next/mdx'
 import withFlowbiteReact from "flowbite-react/plugin/nextjs";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
@@ -25,8 +24,4 @@ const nextConfig: NextConfig = {
 	},
 };
 
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-})
-
-export default withFlowbiteReact(withMDX(nextConfig))
+export default withFlowbiteReact(nextConfig)
