@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Western Washington University",
+        "dates": {
+            "start_date": "2019-09",
+            "end_date": "2023-12"
+        },
+        "location": "Bellingham, WA",
+        "degree": "BS Computer Science",
+        "minors": [
+            "User Experience Design",
+            "Psychology"
+        ],
+        "research": [
+            "Web accessibility",
+            "Affective computing for mental health"
+        ],
+        "image": {
+            "url": "https://marcom.wwu.edu/sites/marcom.wwu.edu/files/2021-01/WWU_MakeWaves_Stacked_RGB%20%281%29.png",
+            "alt": "Western Washington University Logo"
+        }
+    },
+    {
+        "name": "Cascadia College",
+        "dates": {
+            "start_date": "2017-09",
+            "end_date": "2019-06"
+        },
+        "location": "Bothell, WA",
+        "degree": "Certificate in JavaScript Development",
+        "image": {
+            "url": "https://skillpointe.com/sites/default/files/styles/medium/public/institution_images/logos/cascadiac_logo.jpg",
+            "alt": "Cascadia College Logo"
+        }
+    }
+]

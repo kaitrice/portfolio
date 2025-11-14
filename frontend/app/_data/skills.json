@@ -1,0 +1,28 @@
+{
+    "languages": [
+        "Java",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript"
+    ],
+    "libraries & frameworks": [
+        "MySQL",
+        "PostgreSQL",
+        "TailwindCSS",
+        "React",
+        "Next",
+        "Node",
+        "Express"
+    ],
+    "tools": [
+        "Docker",
+        "Vercel",
+        "Expo",
+        "Git",
+        "Firebase",
+        "Postman",
+        "Figma"
+    ]
+}

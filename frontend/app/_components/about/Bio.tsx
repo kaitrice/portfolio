@@ -1,8 +1,6 @@
 import Link from "next/link"
-import data from "../../_lang/en.json"
 import { ProfilePicture, Location } from ".."
-
-const content = data.about
+import content from "../../_data/about.json"
 
 export function Bio() {
     return (

@@ -2,11 +2,8 @@ import { Metadata } from "next"
 import { Education } from "../_components/about/Education"
 import { Experience } from "../_components/about/Experience"
 import { Skills } from "../_components/about/Skills"
-
-import data from "../_lang/en.json"
 import { Bio } from "../_components/about/Bio"
-
-const content = data.about
+import content from "../_data/about.json"
 
 export const metadata: Metadata = {
   title: content.meta.title,
@@ -20,7 +17,6 @@ export default function About() {
       <Experience />
       <Education />
       <Skills />
-      {/* <NavLink item={{ name: "View Resume", url: "/KaitlynRice-Resume.pdf" }} /> */}
     </main> 
   )
 }

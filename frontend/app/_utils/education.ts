@@ -1,7 +1,7 @@
 import { Education } from "./education.type"
 import { sortByYear } from "./utils"
-import data from "../_lang/en.json"
+import education from "../_data/education.json"
 
 export function getEducation(): Education[] {
-	return sortByYear(data.education)
+	return sortByYear(education)
 }

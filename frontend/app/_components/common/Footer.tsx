@@ -1,9 +1,7 @@
-// 'use client'
 import { IconLink } from './Icon'
-import data from "../../_lang/en.json"
+import socials from "../../_data/socials.json"
 
 export default function Footer() {
-	const socials = data.socials
 
 	return (
 		<footer className="border-t mt-6 py-6 order-none md:order flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
@@ -16,7 +14,7 @@ export default function Footer() {
 
 			{/* Copyright */}
 			<div className="text-sm text-center md:text-left">
-				&copy; {new Date().getFullYear()} {data.footer.content}
+				&copy; {new Date().getFullYear()} Kaitlyn Rice. All rights reserved.
 			</div>
 		</footer>
 	)
