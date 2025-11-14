@@ -6,6 +6,7 @@ import { getEducation } from "./education"
 import { Job as JobType } from "./job.type"
 import { Project as ProjectType } from './project.type'
 import { Education as EducationType } from "./education.type"
+import { NavItem as NavItemType } from "@/app/_utils/navItem.type"
 
 export { formatDateToMonthYear, getProject, getProjects, getEducation, getJobs, findIcon }
-export type { LinkType, ProjectType, EducationType, JobType, ImageType, DateType }
+export type { LinkType, ProjectType, EducationType, JobType, ImageType, DateType, NavItemType }
