@@ -1,3 +1,5 @@
+import { DateType, DetailType } from "../_types";
+
 export const iconMap = {
 	github: "mdi:github",
 	linkedin: "mdi:linkedin",
@@ -22,9 +24,9 @@ export function parseDate(dateStr?: string): Date | null {
 	return new Date(year, month - 1, 1);
 }
 
-export function sortByYear<T extends { details?: any }>(data: T[]): T[] {
+export function sortByYear<T extends { details: DetailType }>(data: T[]): T[] {
 	const extract = (item: T) => {
-		const dates = item.details?.dates || {};
+		const dates: DateType = item.details.dates;
 		const start = parseDate(dates.start_date);
 		const end = parseDate(dates.end_date);
 		const hasPresentEnd =

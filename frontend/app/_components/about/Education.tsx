@@ -3,7 +3,6 @@ import { EducationType, getEducation } from "@/app/_utils"
 
 function School({ school }: { school: EducationType }) {
 	const name = school.name
-	const hasDates = (school.dates?.start_date || school.dates?.end_date)
 	const minors = Array.isArray(school?.minors) ? school.minors : []
 	const research = Array.isArray(school?.research) ? school.research : []
 
