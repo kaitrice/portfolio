@@ -4,8 +4,8 @@ import { Dates } from ".."
 function Job({ job }: { job: JobType }) {
 	const company = job.company
 	const position = job.position
-	const type = job.type
-	const hasDates = (job?.dates?.start_date || job?.dates?.end_date)
+	const type = job.details.type
+	const hasDates = (job?.details.dates?.start_date || job?.details.dates?.end_date)
 
 	return (
 		<li className="mb-4 ms-4">
@@ -17,7 +17,7 @@ function Job({ job }: { job: JobType }) {
 						{company}
 					</h3>
 					{hasDates && (
-							<Dates start_date={job.dates?.start_date ?? ""} end_date={job.dates?.end_date ?? ""} />
+							<Dates start_date={job.details.dates?.start_date ?? ""} end_date={job.details.dates?.end_date ?? ""} />
 					)}
 				</header>
 

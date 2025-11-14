@@ -1,5 +1,5 @@
 // import dynamic from 'next/dynamic'
-import { SortableItem } from './type'
+import { ProjectType } from '../_types'
 
 export const iconMap = {
 	html: 'logos:html-5',
@@ -45,16 +45,47 @@ export function findIcon(type: string) {
 	return iconMap[key as keyof typeof iconMap]
 }
 
-export function parseDate(dateStr: string | undefined): Date | null {
-	if (typeof dateStr !== "string" || dateStr.toLowerCase() === "present" || dateStr.toLowerCase() === "pause") return null
+export function parseDate(dateStr?: string): Date | null {
+	if (!dateStr) return null;
 
-	const [yearStr, monthStr] = dateStr.split("-")
-	const year = parseInt(yearStr, 10)
-	const month = parseInt(monthStr, 10)
+	const lower = dateStr.toLowerCase();
+	if (lower === "present" || lower === "pause") return null;
 
-	if (isNaN(year) || isNaN(month)) return null
+	const [year, month] = dateStr.split("-").map(Number);
+	if (!year || !month) return null;
 
-	return new Date(year, month - 1, 1)
+	return new Date(year, month - 1, 1);
+}
+
+export function sortByYear<T extends { details?: any }>(data: T[]): T[] {
+	const extract = (item: T) => {
+		const dates = item.details?.dates || {};
+		const start = parseDate(dates.start_date);
+		const end = parseDate(dates.end_date);
+		const hasPresentEnd =
+			typeof dates.end_date === "string" &&
+			["present", "pause"].includes(dates.end_date.toLowerCase());
+
+		return { start, end, hasPresentEnd };
+	};
+
+	return [...data].sort((a, b) => {
+		const A = extract(a);
+		const B = extract(b);
+
+		if (A.hasPresentEnd !== B.hasPresentEnd) {
+			return A.hasPresentEnd ? -1 : 1;
+		}
+
+		if (A.end && B.end) {
+            const diff = B.end.getTime() - A.end.getTime();
+            if (diff !== 0) return diff;
+        }
+
+		const aStart = A.start?.getTime() ?? -Infinity;
+		const bStart = B.start?.getTime() ?? -Infinity;
+		return bStart - aStart;
+	});
 }
 
 export function formatDateToMonthYear(dateStr: string | undefined): string {
@@ -68,34 +99,3 @@ export function formatDateToMonthYear(dateStr: string | undefined): string {
 	return date.toLocaleDateString("en-US", { year: "numeric", month: "short" })
 }
 
-export function sortByYear<T extends SortableItem>(data: T[]): T[] {
-	return [...data].sort((a, b) => {
-		const getDates = (item: SortableItem) => {
-			const rawEnd = item.dates?.end_date ?? item.details?.dates?.end_date
-			const rawStart = item.dates?.start_date ?? item.details?.dates?.start_date
-
-			return {
-				start: parseDate(rawStart),
-				end: parseDate(rawEnd),
-				hasPresentEnd:
-					typeof rawEnd === "string" &&
-					(rawEnd.toLowerCase() === "present" || rawEnd.toLowerCase() === "pause"),
-			}
-		}
-
-		const aDates = getDates(a)
-		const bDates = getDates(b)
-
-		if (aDates.hasPresentEnd && !bDates.hasPresentEnd) return -1
-		if (!aDates.hasPresentEnd && bDates.hasPresentEnd) return 1
-
-		if (aDates.end && bDates.end) {
-			const endDiff = bDates.end.getTime() - aDates.end.getTime()
-			if (endDiff !== 0) return endDiff
-		}
-
-		const aStart = aDates.start?.getTime() ?? Infinity
-		const bStart = bDates.start?.getTime() ?? Infinity
-		return bStart - aStart;
-	})
-}

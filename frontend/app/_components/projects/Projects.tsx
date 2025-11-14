@@ -41,22 +41,21 @@ function Project({ project }: { project: ProjectType }) {
 }
 
 export function RecentProjects() {
-  const recentProjects = getProjects(5)
-
   return (
     <section className='justify-start text-start'>
       <h1 className="text-4xl font-bold mb-4">Projects</h1>
-      <Projects data={recentProjects} />
+      <Projects limit={5} />
       <NavLink item={{ name: "View All Projects", url: "/projects" }} />
     </section>
   )
 }
 
-export function Projects({ data }: { data: ProjectType[] }) {
+export function Projects({ limit = -1 }: { limit: number }) {
+	const projectData = limit == -1 ? getProjects() : getProjects(limit)
+
   return (
-    // grid grid-cols-[max-content_1fr] gap-y-6 
     <ol className="mb-4">
-      {data.map((project) => (
+      {projectData.map((project) => (
         <li key={project.meta.slug} className="mb-6 ps-4">
           <Project project={project} />
         </li>
