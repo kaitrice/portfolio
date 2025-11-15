@@ -15,16 +15,16 @@ function Job({ job }: { job: JobType }) {
 						{company}
 					</h3>
 					<span className="order-1 font-semibold">
-						<Dates start_date={job.details.dates.start_date ?? ""} end_date={job.details.dates.end_date} />
+						<Dates start_date={job.dates.start_date ?? ""} end_date={job.dates.end_date} />
 					</span>
 				</header>
 
 				<div className="flex flex-col sm:flex-row sm:gap-2 sm:items-center">
 					<h4 className="text-sm text-gray-900 dark:text-white">{position}</h4>
-					{job.details.type && (
+					{job.type && (
 						<>
 							<span className="hidden sm:block text-gray-500 dark:text-gray-400">&bull;</span>
-							<p className="text-sm text-gray-500 dark:text-gray-400">{job.details.type}</p>
+							<p className="text-sm text-gray-500 dark:text-gray-400">{job.type}</p>
 						</>
 					)}
 				</div>

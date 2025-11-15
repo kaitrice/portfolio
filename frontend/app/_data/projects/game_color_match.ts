@@ -6,12 +6,12 @@ export const color_match: ProjectType = {
         description: "Mini game identifying colors with hex and RGB values.",
         slug: "color-match"
     },
+    dates: {
+        "start_date": "2021-09",
+        "end_date": "2022-03"
+    },
     details: {
         company: "Western Washington University, Dynamic Web Pages",
-        dates: {
-            "start_date": "2021-09",
-            "end_date": "2022-03"
-        },
         tools: [
             "HTML",
             "CSS",

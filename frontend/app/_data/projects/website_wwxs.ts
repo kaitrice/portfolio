@@ -6,12 +6,12 @@ export const wwxs_website: ProjectType = {
         description: "IoT water monitoring system focusing on scaling API infrastructure and optimizing database.",
         slug: "water-weather-station"
     },
+    dates: {
+        start_date: "2023-01",
+        end_date: "2023-12"
+    },
     details: {
         company: "Western Washington University | Computer Science Capstone",
-        dates: {
-            start_date: "2023-01",
-            end_date: "2023-12"
-        },
         tools: [
             "Angular",
             "Node.js",

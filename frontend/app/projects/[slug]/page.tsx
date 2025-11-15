@@ -59,7 +59,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 				</div>
 
 				<aside className="order-1 md:sticky md:top-30 md:self-start md:z-20">
-					<Details details={details} />
+					<Details details={details} dates={project.dates} />
 				</aside>
 			</div>
 		</main>

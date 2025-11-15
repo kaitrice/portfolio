@@ -6,12 +6,12 @@ export const deadwood: ProjectType = {
         description: "Board game implemented as a text-based console (CLI) application and graphical user interface (GUI).",
         slug: "deadwood"
     },
+    dates: {
+        start_date: "2023-03",
+        end_date: "2023-06"
+    },
     details: {
         company: "Western Washington University | Object Oriented Design",
-        dates: {
-            start_date: "2023-03",
-            end_date: "2023-06"
-        },
         tools: ["Java", "Swing (Java Library)"],
         images: [
             {

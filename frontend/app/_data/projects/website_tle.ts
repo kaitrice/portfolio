@@ -6,12 +6,12 @@ export const tle_website: ProjectType = {
         description: "Designed and developed band website consistent with brand identity.",
         slug: "the-lucky-effect"
     },
+    dates: {
+        start_date: "2025-01",
+        end_date: "2025-11"
+    },
     details: {
         company: "The Lucky Effect",
-        dates: {
-            start_date: "2025-01",
-            end_date: "2025-11"
-        },
         tools: [
             "TypeScript",
             "Next.js",

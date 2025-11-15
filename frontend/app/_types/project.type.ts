@@ -13,7 +13,6 @@ export type CaseStudy = {
 
 export type Details = {
 	company?: string
-	dates: DateType
 	tools: string[]
 	images: ImageType[]
 	links?: LinkType[]
@@ -21,6 +20,7 @@ export type Details = {
 
 export type Project = {
 	meta: MetaType
+	dates: DateType
 	details: Details
 	caseStudy?: CaseStudy
 }

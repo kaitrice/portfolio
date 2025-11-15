@@ -19,7 +19,7 @@ function Project({ project }: { project: ProjectType }) {
   return (
     <article className="flex flex-col sm:flex-row gap-1 sm:gap-6 items-start">
       <span className="font-semibold">
-        <Dates start_date={details.dates.start_date}  end_date={details.dates?.end_date} />
+        <Dates start_date={project.dates.start_date}  end_date={project.dates?.end_date} />
       </span>
       
       <span>
@@ -29,12 +29,12 @@ function Project({ project }: { project: ProjectType }) {
 
 
           {/* Project Links */}
-          {project.details.links && <Links links={project.details.links} />}
+          {project.details.links && <Links links={details.links ? details.links : []} />}
         </header>
 
         <div className="text-gray-500 dark:text-gray-400">
           <p className="mb-1 text-sm">{project.meta.description}</p>
-          <Tools tools={project.details.tools} />
+          <Tools tools={details.tools} />
         </div>
       </span>
     </article>

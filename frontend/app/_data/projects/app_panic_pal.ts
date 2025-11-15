@@ -6,12 +6,12 @@ export const panic_pal: ProjectType = {
         description: "Cross-platform app providing panic and anxiety relief when it matters most.",
         slug: "panic-pal"
     },
+    dates: {
+        start_date: "2023-09",
+        end_date: "2023-12"
+    },
     details: {
         company: "Western Washington University | Principles of Human-Centered Technology Design",
-        dates: {
-            start_date: "2023-09",
-            end_date: "2023-12"
-        },
         tools: [
             "React Native",
             "Firebase",

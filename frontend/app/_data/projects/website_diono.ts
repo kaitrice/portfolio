@@ -6,12 +6,12 @@ export const diono_website: ProjectType = {
         description: "Redesigned BigCommerce theme, boosting performance and visual consistency.",
         slug: "diono-website"
     },
+    dates: {
+        start_date: "2025-04",
+        end_date: "2025-05"
+    },
     details: {
         company: "Diono",
-        dates: {
-            start_date: "2025-04",
-            end_date: "2025-05"
-        },
         tools: [
             "HTML",
             "CSS",

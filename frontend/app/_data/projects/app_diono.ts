@@ -6,12 +6,12 @@ export const diono_app: ProjectType = {
         description: "Cross-platform app providing caregivers realtime car seat resources to keep their kids safe.",
         slug: "diono-app"
     },
+    dates: {
+        start_date: "2024-06",
+        end_date: "2024-12"
+    },
     details: {
         company: "Diono",
-        dates: {
-            start_date: "2024-06",
-            end_date: "2024-12"
-        },
         tools: [
             "React Native",
             "Firebase",

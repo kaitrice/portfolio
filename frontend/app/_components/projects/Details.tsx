@@ -1,7 +1,7 @@
-import { DetailType } from "@/app/_utils";
+import { DateType, DetailType } from "@/app/_utils";
 import { Dates, IconLink, Tools } from "..";
 
-export function Details({ details }: { details: DetailType }) {
+export function Details({ details, dates }: { details: DetailType, dates: DateType }) {
     return (
         <div className="flex-shrink-0">
             <h2 className="">Overview</h2>
@@ -15,7 +15,7 @@ export function Details({ details }: { details: DetailType }) {
                 )}
                 <div>
                     <h3 className="text-base font-bold">Timeline</h3>
-                    <Dates start_date={details.dates.start_date} end_date={details.dates.end_date} />
+                    <Dates start_date={dates.start_date} end_date={dates.end_date} />
                 </div>
 
                 <div>
