@@ -1,9 +1,9 @@
 {
     "meta": {
         "title": "Kaitlyn Rice | About",
-        "description": "I'm a full stack developer with hands-on experience building responsive web apps, scalable APIs, and data-driven solutions."
+        "description": "I'm a software engineer with experience building responsive web apps, scalable APIs, and data-driven solutions."
     },
     "name": "Kaitlyn Rice",
-    "position": "Software Developer",
-    "bio": "I'm a full stack developer with hands-on experience building responsive web apps, scalable APIs, and data-driven solutions. Since 2017, I've honed my skills through personal projects, freelance work, and professional roles, gaining expertise in frontend frameworks like React, Next, and Angular, backend development with Node.js and Python, and database design and optimization using PostgreSQL and MySQL.\n\nMy work spans interactive websites, real-time IoT systems, and e-commerce platforms. I've implemented CI/CD pipelines, deployed cloud-based services, and optimized both front-end performance and backend data workflows. Beyond coding, I enjoy designing intuitive user interfaces, uncovering insights through data analysis, and solving problems end-to-end from concept to production."
+    "position": "Software Engineer",
+    "bio": "I'm a full stack software engineer with experience building responsive web apps, scalable APIs, and data-driven solutions. I've been coding since 2017, honing my skills through personal projects, freelance work, and professional roles, gaining expertise in frontend frameworks, backend development, and database design and optimization.\n\nMy work spans from interactive websites, real-time IoT systems, and e-commerce platforms. I've implemented CI/CD pipelines, deployed cloud-based services, and optimized both front-end performance and backend workflows. Beyond coding, I love creating spreadsheets and dashboards for almost every occasion, designing my Animal Crossing island, or hanging out with my 2 orange kitties, Rhubarb and Clementine."
 }

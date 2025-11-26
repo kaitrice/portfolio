@@ -38,13 +38,13 @@ export const tle_website: ProjectType = {
         ]
     },
     caseStudy: {
-        problem: "As the band was starting to grow and release music, they need to enhance their online presence with a professional website showcasing music, events, and story without only relying on social media.",
-        solution: "A custom Nextjs, SEO friendly website with dynamic content and Nodejs REST API hosted using Azure functions to extract transform and load (ETL) data from Apple Music and Spotify.",
+        problem: "As the band was starting to grow and release music, they need to enhance their online presence with a professional website showcasing music, events, and telling their story without monthly subscription costs that most website builders have.",
+        solution: "A custom Next.js, SEO friendly frontend with dynamic content retrieved from a Node.js, REST API hosted on Azure functions that extracts, transforms, and loads (ETL) data from Apple Music, Spotify, and Bands in Town enabling automated data updates.",
         alt_solution: "A wix or SquareSpace website was considered for speed and content management system (CMS), but a custom code provided a cheaper solution tailored to their aesthetic and mostly stable content.",
         challenges: [
             "Creating a modern website without the help of a full CMS. I've built many websites throughout the years, but this challenged my design creativity while staying within the bounds of a typical artist portfolio.",
-            "Ensuring the website was fast and SEO friendly. Making using of Next's Metadata class and customizing it to fit the band's growing needs.",
-            "Integrating APIs into a unified, expected model that could easily be show cases on the frontend. I started with the basics of what should be expected, then explored each API's capabilities building out the model with pieces of each."
+            "Ensuring the website was fast and SEO friendly. I used Next's Metadata class and customizing it to fit the band's needs for each page.",
+            "Integrating APIs into a unified, expected model that could easily be showcased on the frontend. I started with the basics of what should be expected, then explored each API's capabilities building out the model with pieces of each."
         ],
         results: "Ongoing management and monitoring is expected post-launch. Results coming soon."
     }

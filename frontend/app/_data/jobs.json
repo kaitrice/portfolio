@@ -1,16 +1,16 @@
 [
     {
         "company": "The Lucky Effect",
-        "position": "Full Stack Devleoper",
-        "type": "Freelance Contract",
+        "position": "Full Stack Engineer",
+        "type": "Freelance",
         "dates": {
             "start_date": "2025-01",
-            "end_date": "2025-11"
+            "end_date": "Present"
         }
     },
     {
         "company": "Diono",
-        "position": "Ecommerce Operations Assistant",
+        "position": "E-commerce Web Developer",
         "type": "Full-Time",
         "dates": {
             "start_date": "2023-08",
@@ -19,8 +19,8 @@
     },
     {
         "company": "Learning.com",
-        "position": "Content Developer",
-        "type": "Freelance Contract",
+        "position": "Content Data Specialist",
+        "type": "Contract",
         "dates": {
             "start_date": "2025-05",
             "end_date": "2025-06"
